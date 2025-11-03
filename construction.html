@@ -2,49 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Construction & Challenges | Panama Canal Museum</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
+    <a class="logo" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="historical.html">Historical Background</a>
-      <a href="construction.html" aria-current="page">Construction &amp; Challenges</a>
+      <a href="construction.html" class="active">Construction &amp; Challenges</a>
       <a href="impact.html">Social &amp; Political Impact</a>
       <a href="significance.html">Legacy &amp; Significance</a>
       <a href="timeline.html">Timeline</a>
       <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
     </nav>
   </header>
 
-  <main class="container prose">
+  <main class="wrapper prose">
     <h1>Construction &amp; Challenges</h1>
-    <p>The American phase began in 1904 under John Stevens, later George W. Goethals. Abandoning a sea-level plan, engineers built paired locks lifting ships to Gatún Lake. Dr. William Gorgas’s sanitation campaign targeted mosquitoes, slashing yellow fever and malaria.</p>
-    <p>Crews faced landslides at Culebra Cut, dynamite risks, heavy tropical rain, and extreme heat. By 1913, hundreds of millions of cubic yards had been moved; locks, dams, railways, and power systems were integrated into a coordinated whole.</p>
+    <p>
+      Work began in 1904 with Chief Engineer John Wallace, then John Stevens, and later George Washington Goethals.
+      The redesign to a lock canal allowed ships to be raised to Gatun Lake and lowered to sea level on each side.
+      Sanitary officer William Gorgas led mosquito control that reduced yellow fever and malaria.
+    </p>
 
-    <div class="media-grid">
-      <figure>
-        <img src="assets/culebra-cut.jpg" alt="Excavation at Culebra Cut" />
-        <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
+    <section class="grid grid-3 gallery fade-in">
+      <figure class="frame">
+        <img src="assets/culebra-cut.jpg" alt="Culebra Cut excavation" data-cap="Culebra Cut was the most difficult excavation due to slides." />
+        <figcaption>Culebra Cut required around-the-clock excavation.</figcaption>
       </figure>
-      <figure>
-        <img src="assets/gorgas-map.jpg" alt="Map/diagram of mosquito sanitation measures by Dr. Gorgas" />
-        <figcaption>Gorgas’s disease-control plan.</figcaption>
+      <figure class="frame">
+        <img src="assets/gorgas-map.jpg" alt="Map of areas sanitized against malaria mosquitoes" data-cap="Areas sanitized against malaria mosquitoes, an anti-vector map." />
+        <figcaption>Anti-mosquito sanitation reduced disease.</figcaption>
       </figure>
-      <figure>
-        <img src="assets/workers.jpg" alt="International workers at the canal" />
-        <figcaption>Thousands of international workers made it possible.</figcaption>
+      <figure class="frame">
+        <img class="img-small" src="assets/first-ship.jpg" alt="SS Ancon first official transit" data-cap="SS Ancon during the first official transit on August 15, 1914." />
+        <figcaption>SS <i>Ancon</i> first official transit, 1914.</figcaption>
       </figure>
-    </div>
+    </section>
+
+    <h2>Artifacts</h2>
+    <ul class="artifacts fade-in">
+      <li><strong>Steam shovel bucket</strong> — symbol of mass earth-moving in the Cut.</li>
+      <li><strong>Lock control panel sketch</strong> — shows electric operation of massive gates.</li>
+      <li><strong>Sanitation crew spray canister</strong> — represents public health engineering.</li>
+    </ul>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    <div class="wrapper">
+      <p>Created by Arav &amp; Deniz</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
-  <script src="js/script.js"></script>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" alt="" />
+    <figcaption class="lightbox-cap"></figcaption>
+  </div>
 </body>
 </html>
