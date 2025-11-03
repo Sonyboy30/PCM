@@ -2,42 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Legacy & Significance | Panama Canal Museum</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
+    <a class="logo" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="historical.html">Historical Background</a>
       <a href="construction.html">Construction &amp; Challenges</a>
       <a href="impact.html">Social &amp; Political Impact</a>
-      <a href="significance.html" aria-current="page">Legacy &amp; Significance</a>
+      <a href="significance.html" class="active">Legacy &amp; Significance</a>
       <a href="timeline.html">Timeline</a>
       <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
     </nav>
   </header>
 
-  <main class="container prose">
+  <main class="wrapper prose">
     <h1>Legacy &amp; Significance</h1>
-    <p>Opened in 1914, the canal reconfigured maritime routes, accelerated trade, and became a symbol of engineering prowess—alongside enduring debates over power and equity. Modern expansions and water-management challenges continue to shape its future.</p>
+    <p>
+      The Panama Canal was a hallmark of Progressive Era state capacity. It joined public health,
+      engineering, and administration to deliver a global trade shortcut. It also raised questions
+      about consent and control that continued into the twentieth century and beyond.
+    </p>
 
-    <figure class="full-bleed">
-      <img src="assets/first-ship.jpg" alt="SS Ancon transiting the canal in 1914" />
-      <figcaption>SS <em>Ancon</em>, the first official transit, August 15, 1914.</figcaption>
-    </figure>
-
-    <blockquote class="pull">
-      “The canal was not just a triumph of engineering—it was a statement of power.”
-    </blockquote>
+    <h2>Why It Mattered in the Progressive Era</h2>
+    <ul class="bullets">
+      <li><strong>State capacity:</strong> coordinating engineering, sanitation, and logistics at national scale.</li>
+      <li><strong>Science and health:</strong> vector control as public policy.</li>
+      <li><strong>Administration:</strong> complex governance for locks, lake, dams, and labor.</li>
+      <li><strong>Power and diplomacy:</strong> the Canal signaled a stronger American role in the region.</li>
+    </ul>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    <div class="wrapper">
+      <p>Created by Arav &amp; Deniz</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
-  <script src="js/script.js"></script>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" alt="" />
+    <figcaption class="lightbox-cap"></figcaption>
+  </div>
 </body>
 </html>
