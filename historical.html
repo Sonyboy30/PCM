@@ -2,49 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Historical Background | Panama Canal Museum</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
+    <a class="logo" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
       <a href="index.html">Home</a>
-      <a href="historical.html" aria-current="page">Historical Background</a>
+      <a href="historical.html" class="active">Historical Background</a>
       <a href="construction.html">Construction &amp; Challenges</a>
       <a href="impact.html">Social &amp; Political Impact</a>
       <a href="significance.html">Legacy &amp; Significance</a>
       <a href="timeline.html">Timeline</a>
       <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
     </nav>
   </header>
 
-  <main class="container prose">
+  <main class="wrapper prose">
     <h1>Historical Background</h1>
-    <p>The dream of linking the Atlantic and Pacific through Panama dates to the 1500s. In the 1880s, French engineer Ferdinand de Lesseps—builder of the Suez Canal—attempted a sea-level canal, but disease, landslides, and financial collapse ended the effort.</p>
-    <p>In 1903, the United States supported Panama’s independence from Colombia and secured rights to build. Shifting to a lock-based design, construction formally began in 1904 and culminated in the canal’s 1914 opening—reshaping world trade and projecting U.S. power.</p>
+    <p>
+      The idea of a water passage through Panama dates to the sixteenth century. In the late nineteenth century,
+      French engineer Ferdinand de Lesseps began a sea-level project that stalled after landslides, disease,
+      and financial collapse. In 1903, the United States supported Panamanian independence and negotiated
+      the right to build. The American plan embraced a lock system suited to the terrain.
+    </p>
 
-    <div class="media-grid">
-      <figure>
-        <img src="assets/french-failure.jpg" alt="French engineers in difficult tropical excavation terrain" />
-        <figcaption>French efforts struggled with landslides and disease, 1880s.</figcaption>
+    <div class="gallery grid grid-3 fade-in">
+      <figure class="frame">
+        <img src="assets/french-failure.jpg" alt="French excavation equipment in difficult tropical terrain" data-cap="French engineers struggle in tropical terrain, 1880s." />
+        <figcaption>French engineers in the 1880s faced landslides and illness.</figcaption>
       </figure>
-      <figure>
-        <img src="assets/roosevelt-visit.jpg" alt="President Theodore Roosevelt touring the Canal Zone in 1906" />
-        <figcaption>Roosevelt’s 1906 visit signaled political will.</figcaption>
+      <figure class="frame">
+        <img src="assets/roosevelt-visit.jpg" alt="President Theodore Roosevelt visiting Panama in 1906" data-cap="Roosevelt’s 1906 visit boosted morale and attention." />
+        <figcaption>President Theodore Roosevelt visits in 1906.</figcaption>
       </figure>
-      <figure>
-        <img src="assets/workers.jpg" alt="Canal workers from across the Caribbean and Latin America" />
-        <figcaption>International labor underpinned the project.</figcaption>
+      <figure class="frame">
+        <img src="assets/workers.jpg" alt="Caribbean and Latin American workers at the Canal" data-cap="Workers arrived from across the Caribbean and Latin America." />
+        <figcaption>Workers came from across the Caribbean and Latin America.</figcaption>
       </figure>
     </div>
+
+    <h2>Primary Source Quotes</h2>
+    <blockquote class="primary">
+      “I took the Isthmus” — Theodore Roosevelt, reflecting on the decision to build the Canal. <span class="quote-src">Primary: Roosevelt Papers (Library of Congress)</span>
+    </blockquote>
+    <blockquote class="primary">
+      “The Hay-Bunau-Varilla Treaty granted the United States the Canal Zone in perpetuity” <span class="quote-src">Primary: Treaty text contextualized via U.S. Office of the Historian</span>
+    </blockquote>
+    <blockquote class="primary">
+      “On August 15, 1914, SS <i>Ancon</i> made the first official transit” <span class="quote-src">Primary: National Archives photo record of opening day</span>
+    </blockquote>
+
+    <p class="note">
+      These quotations anchor the exhibit in primary evidence while the page text synthesizes context from secondary histories.
+    </p>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    <div class="wrapper">
+      <p>Created by Arav &amp; Deniz</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
-  <script src="js/script.js"></script>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" alt="" />
+    <figcaption class="lightbox-cap"></figcaption>
+  </div>
 </body>
 </html>
