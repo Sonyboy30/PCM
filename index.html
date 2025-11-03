@@ -1,73 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panama Canal Museum | Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <link rel="preload" href="assets/hero-canal.jpg" as="image">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<body>
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="overlay">
-      <h1 class="fade-in">Panama Canal Museum</h1>
-      <p class="tagline fade-in-delay">Exploring the Dream, the Struggle, and the Legacy</p>
-
-      <nav class="main-nav fade-in-delay">
-        <a href="index.html" class="active">Home</a>
-        <a href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction & Challenges</a>
-        <a href="impact.html">Social & Political Impact</a>
-        <a href="significance.html">Legacy & Significance</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="plaque.html">Plaque</a>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
-    <section class="intro">
-      <h2>The Dream, The Struggle, The Legacy</h2>
+  <main id="main">
+    <section class="hero">
+      <figure class="hero-figure">
+        <img src="assets/hero-canal.jpg" alt="Aerial view of the Panama Canal and its locks" />
+        <figcaption>Aerial view of the Panama Canal — image for educational use</figcaption>
+      </figure>
+      <div class="hero-text">
+        <h2>The Dream, The Struggle, The Legacy</h2>
+        <p>Explore the triumphs and tensions behind one of the 20th century’s greatest engineering achievements.</p>
+        <p><a class="btn" href="historical.html">Experience the Canal</a></p>
+      </div>
+    </section>
+
+    <section class="intro wrap">
+      <h3>Welcome</h3>
       <p>
-        Explore the triumphs and tensions behind one of the 20th century’s greatest engineering achievements.
-        The Panama Canal stands as one of humanity’s most impressive feats, connecting the Atlantic and Pacific
-        Oceans and forever reshaping world trade.
+        The Panama Canal stands as one of humanity’s most impressive engineering feats. Explore how ambition, innovation,
+        public health, labor, and geopolitics shaped its creation and lasting impact on global trade.
+      </p>
+      <p>
+        Built in the early 1900s, the Canal reshaped maritime routes by linking the Atlantic and Pacific Oceans.
+        Its story is one of determination, disease control, politics, segregation, and progress — a symbol of both
+        human ingenuity and imperial ambition.
       </p>
     </section>
 
-    <section class="sections-grid">
-      <div class="card fade-up">
-        <h3>Historical Background</h3>
-        <p>From early visions to the failed French attempt and Roosevelt’s lock-based canal plan.</p>
-        <a href="historical.html" class="btn">Learn more</a>
-      </div>
+    <section class="cards wrap">
+      <article class="card">
+        <h4>Historical Background</h4>
+        <p>From early visions to the failed French attempt and Roosevelt’s pivot to a lock-based canal.</p>
+        <a class="card-link" href="historical.html" aria-label="Read Historical Background">Learn more</a>
+      </article>
 
-      <div class="card fade-up">
-        <h3>Construction & Challenges</h3>
-        <p>Excavation, disease control, and the labor that made the canal possible.</p>
-        <a href="construction.html" class="btn">Learn more</a>
-      </div>
+      <article class="card">
+        <h4>Construction &amp; Challenges</h4>
+        <p>Excavation at Culebra Cut, dams and locks, mosquito control, and day-to-day hazards.</p>
+        <a class="card-link" href="construction.html" aria-label="Read Construction and Challenges">Learn more</a>
+      </article>
 
-      <div class="card fade-up">
-        <h3>Social & Political Impact</h3>
-        <p>Segregation, sovereignty, and shifting power between Panama and the U.S.</p>
-        <a href="impact.html" class="btn">Learn more</a>
-      </div>
+      <article class="card">
+        <h4>Social &amp; Political Impact</h4>
+        <p>Labor systems, segregation and pay, sovereignty, and U.S.–Panama relations.</p>
+        <a class="card-link" href="impact.html" aria-label="Read Social and Political Impact">Learn more</a>
+      </article>
 
-      <div class="card fade-up">
-        <h3>Legacy & Significance</h3>
-        <p>A lasting artery of global trade and a symbol of human engineering and ambition.</p>
-        <a href="significance.html" class="btn">Learn more</a>
-      </div>
+      <article class="card">
+        <h4>Legacy &amp; Significance</h4>
+        <p>A lasting artery of global trade, evolving governance, and modern expansions.</p>
+        <a class="card-link" href="significance.html" aria-label="Read Legacy and Significance">Learn more</a>
+      </article>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Created by Arav & Deniz — © 2025 Panama Canal Digital Museum</p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
   </footer>
 </body>
 </html>
