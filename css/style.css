@@ -1,199 +1,208 @@
-/* =============================
-   GLOBAL STYLES
-============================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+/* ------------------------------
+   Panama Canal Museum Unified Style
+   Created by Arav & Deniz — 2025
+--------------------------------*/
 
 :root {
-  --navy: #081229;
-  --navy-light: #0a1a3a;
-  --accent: #ffd369;
-  --text-light: #f4f4f4;
-  --overlay: rgba(0, 15, 40, 0.65);
+  --primary: #eaf4ff;
+  --secondary: #0077b6;
+  --accent: #0096c7;
+  --text-dark: #023047;
+  --text-light: #ffffff;
+  --card-bg: #ffffffcc;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--navy);
+  background: var(--primary);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* ---------- Navbar ---------- */
+header {
+  background: var(--secondary);
   color: var(--text-light);
-  overflow-x: hidden;
-}
-
-/* =============================
-   HERO SECTION
-============================= */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url('../assets/hero-canal.jpg') center/cover no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
+  padding: 15px 50px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--overlay);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+header h1 {
+  font-size: 1.6em;
+  letter-spacing: 1px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.hero .tagline {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-/* NAVIGATION */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.main-nav a {
-  color: #fff;
+nav a {
+  color: var(--text-light);
+  margin: 0 15px;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("../assets/hero-canal.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 50, 80, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+}
+
+.hero-content a {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--accent);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero-content a:hover {
+  background: var(--secondary);
+}
+
+/* ---------- Content Sections ---------- */
+.section {
+  padding: 80px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--secondary);
+  margin-bottom: 40px;
+}
+
+.section p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* ---------- Image Captions ---------- */
+figure {
+  margin: 40px auto;
+  text-align: center;
+  max-width: 700px;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--card-bg);
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  background: var(--secondary);
+  color: white;
+  padding: 12px;
+  font-size: 0.95em;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--secondary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 80px;
+  font-size: 0.9em;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 4px solid var(--accent);
+  padding-left: 30px;
+}
+
+.timeline-event {
+  margin-bottom: 30px;
   position: relative;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: var(--accent);
-}
-
-/* =============================
-   MAIN CONTENT
-============================= */
-.content {
-  background-color: var(--navy-light);
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.intro {
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-}
-
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  line-height: 1.7;
-  font-size: 1.1rem;
-}
-
-/* Section Cards */
-.sections-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
-.card p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
+.timeline-event::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
   background: var(--accent);
-  color: #000;
-  padding: 0.6rem 1.4rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  border-radius: 50%;
 }
 
-.btn:hover {
-  background: #ffdf80;
+.timeline-event h3 {
+  color: var(--secondary);
+  margin-bottom: 5px;
 }
 
-/* =============================
-   FOOTER
-============================= */
-footer {
-  text-align: center;
-  background: var(--navy);
-  color: #aaa;
-  padding: 1.5rem;
-  font-size: 0.9rem;
+.timeline-event p {
+  color: var(--text-dark);
 }
 
-/* =============================
-   ANIMATIONS
-============================= */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-out forwards;
-}
-
-.fade-in-delay {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-out forwards;
-  animation-delay: 0.5s;
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* ---------- Responsiveness ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
   }
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .hero-content h2 {
+    font-size: 2.2em;
   }
 }
