@@ -2,45 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Plaque | Panama Canal Museum</title> 
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Commemorative Plaque | Panama Canal Museum</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-<header class="site-header">
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Commemorative Plaque</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html">Historical Background</a>
-    <a href="construction.html">Construction &amp; Challenges</a>
-    <a href="impact.html">Social &amp; Political Impact</a>
-    <a href="significance.html">Legacy &amp; Significance</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="plaque.html" class="cta active">Plaque</a>
-  </nav>
-</header>
+<body data-page="plaque">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="plaque">
-    <h2>In Honor of Those Who Built the Canal</h2>
-    <p>
-      This exhibit honors the tens of thousands of workers, engineers, nurses, and families who transformed
-      the isthmus into a working waterway between two oceans. Their labor—across languages and nationalities—
-      faced landslides, heat, and disease. Guided by new public-health science and bold engineering, they
-      forged locks, dams, and a lake that reshaped trade and diplomacy. The Canal’s story reflects the
-      Progressive Era’s faith in expertise and infrastructure, as well as the hard truths of inequality
-      and sovereignty that marked its creation. May their perseverance and skill continue to inspire
-      future builders and citizens.
-    </p>
-  </article>
-</main>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Commemorative Plaque</h2>
+      <p>In honor of those who built the Canal — whose skill, labor, and courage made it possible.</p>
+    </header>
+
+    <section class="grid two">
+      <div>
+        <p>
+          This digital plaque honors the thousands of workers from across the world whose labor, expertise, and sacrifice
+          created the Panama Canal. May their contributions continue to inspire engineering, cooperation, and courage for generations.
+        </p>
+      </div>
+
+      <aside class="gallery">
+        <figure>
+          <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque mounted on stone" />
+          <figcaption>Panama Canal dedication plaque — National Archives.</figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
 </body>
 </html>
