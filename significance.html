@@ -1,59 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Legacy & Significance | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
   <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html">Construction &amp; Challenges</a>
-      <a href="impact.html">Social &amp; Political Impact</a>
-      <a href="significance.html" class="active">Legacy &amp; Significance</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="plaque.html">Plaque</a>
-      <a href="bibliography.html">Bibliography</a>
-    </nav>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Panama Canal Museum</a>
+      <nav class="main-nav">
+        <a href="historical.html">Historical Background</a>
+        <a href="construction.html">Construction &amp; Challenges</a>
+        <a href="impact.html">Social &amp; Political Impact</a>
+        <a class="active" href="significance.html">Legacy &amp; Significance</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+    </div>
   </header>
 
-  <main class="wrapper prose">
-    <h1>Legacy &amp; Significance</h1>
-    <p>
-      The Panama Canal was a hallmark of Progressive Era state capacity. It joined public health,
-      engineering, and administration to deliver a global trade shortcut. It also raised questions
-      about consent and control that continued into the twentieth century and beyond.
-    </p>
+  <section class="page-head parallax-soft" data-parallax-speed="0.15">
+    <div class="container">
+      <h1>Legacy &amp; Significance</h1>
+      <p>Global trade, engineering reputation, administrative lessons, and later governance changes.</p>
+    </div>
+  </section>
 
-    <h2>Why It Mattered in the Progressive Era</h2>
-    <ul class="bullets">
-      <li><strong>State capacity:</strong> coordinating engineering, sanitation, and logistics at national scale.</li>
-      <li><strong>Science and health:</strong> vector control as public policy.</li>
-      <li><strong>Administration:</strong> complex governance for locks, lake, dams, and labor.</li>
-      <li><strong>Power and diplomacy:</strong> the Canal signaled a stronger American role in the region.</li>
-    </ul>
+  <main class="container">
+    <section class="content-two-col reveal">
+      <div>
+        <h2>Trade and Technology</h2>
+        <p>The canal reshaped shipping by cutting time and distance between the Atlantic and Pacific. It stood as a model of modern planning and technical management taught across the world.</p>
+      </div>
+      <div>
+        <h2>Governance and Change</h2>
+        <p>Later treaties transferred control to Panama, reflecting evolving ideas about sovereignty and partnership. The project’s history continues to inform debates about infrastructure and public good.</p>
+      </div>
+    </section>
+
+    <section class="content-wide reveal">
+      <h2>Images of a Lasting Legacy</h2>
+      <div class="gallery">
+        <figure class="media">
+          <img src="assets/first-ship.jpg" alt="SS Ancon completing the first official transit" data-cap="SS <i>Ancon</i>, first official transit, 1914.">
+          <figcaption>SS <i>Ancon</i>, first official transit, 1914.</figcaption>
+        </figure>
+        <figure class="media">
+          <img src="assets/hero-canal.jpg" alt="Aerial view of locks in operation" data-cap="Aerial views show the canal’s continuing role in trade.">
+          <figcaption>Aerial views show the canal’s continuing role in trade.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="quote-panel reveal">
+      <blockquote>
+        <p>“[Primary-source excerpt placeholder — edit text].”</p>
+        <cite>— Contemporary government or speech excerpt (primary)</cite>
+      </blockquote>
+    </section>
+
+    <div class="page-cta">
+      <a class="btn btn-primary" href="timeline.html">Next: Timeline</a>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>Created by Arav &amp; Deniz</p>
-      <nav class="footer-nav">
-        <a href="timeline.html">Timeline</a>
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-    </div>
+    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close">×</button>
-    <img class="lightbox-img" alt="" />
-    <figcaption class="lightbox-cap"></figcaption>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image"></button>
+    <img class="lightbox-img" alt="">
+    <p class="lightbox-cap"></p>
   </div>
 </body>
 </html>
