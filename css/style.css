@@ -1,208 +1,126 @@
-/* ------------------------------
-   Panama Canal Museum Unified Style
-   Created by Arav & Deniz — 2025
---------------------------------*/
-
-:root {
-  --primary: #eaf4ff;
-  --secondary: #0077b6;
-  --accent: #0096c7;
-  --text-dark: #023047;
-  --text-light: #ffffff;
-  --card-bg: #ffffffcc;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+:root{
+  --bg:#0b1020;
+  --panel:#121a33;
+  --text:#e9eefc;
+  --muted:#b9c3ea;
+  --brand:#4aa8ff;
+  --brand-2:#3dd6b2;
+  --line:#233058;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --radius:18px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(160deg, #0a0f1f, #141e3d 55%, #0a0f1f);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-body {
-  background: var(--primary);
-  color: var(--text-dark);
-  line-height: 1.7;
+img{max-width:100%;display:block;border-radius:12px}
+figure{margin:0}
+figcaption{font-size:.9rem;color:var(--muted);margin-top:.4rem}
+
+a{color:var(--brand);text-decoration:none}
+a:hover{opacity:.9}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem;background:#fff;color:#000}
+
+.site-header{
+  position:sticky;top:0;z-index:10;
+  background: rgba(10,15,31,.75);
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.logo a{display:inline-block;padding:.9rem 0;color:#fff;font-weight:700;letter-spacing:.2px}
+
+.nav{list-style:none;display:flex;gap:.75rem;align-items:center;padding:0;margin:0}
+.nav a{
+  display:block;padding:.55rem .9rem;border-radius:999px;color:var(--text);
+  border:1px solid transparent;
+}
+.nav a:hover{background:rgba(255,255,255,.06)}
+.nav a[aria-current="page"], .nav a.active{
+  border-color:var(--brand); color:#fff;
 }
 
-/* ---------- Navbar ---------- */
-header {
-  background: var(--secondary);
-  color: var(--text-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
+.nav-toggle{
+  display:none;
+  background:transparent;border:1px solid var(--line);
+  color:var(--text);padding:.5rem .8rem;border-radius:10px;
+}
+
+/* Hero */
+.hero{display:grid;gap:1.2rem;padding:1.2rem 0 2rem}
+.hero-figure{grid-row:1}
+.hero-text{align-self:center}
+.hero-text h2{font-size: clamp(1.8rem, 4vw, 2.6rem);margin:.2rem 0 .6rem}
+.btn{
+  display:inline-block;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#051028;font-weight:700;padding:.7rem 1rem;border-radius:12px;
   box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-header h1 {
-  font-size: 1.6em;
-  letter-spacing: 1px;
-}
+/* Sections & Cards */
+.page-header{padding:1.5rem 0 1rem}
+.page-header h2{font-size: clamp(1.6rem, 3.5vw, 2.2rem);margin:.2rem 0 .5rem}
 
-nav a {
-  color: var(--text-light);
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-/* ---------- Hero Section ---------- */
-.hero {
-  position: relative;
-  height: 90vh;
-  background: url("../assets/hero-canal.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--text-light);
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 50, 80, 0.4);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-
-.hero-content h2 {
-  font-size: 2.8em;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-}
-
-.hero-content a {
-  display: inline-block;
-  margin-top: 20px;
-  background: var(--accent);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.hero-content a:hover {
-  background: var(--secondary);
-}
-
-/* ---------- Content Sections ---------- */
-.section {
-  padding: 80px 10%;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 2em;
-  color: var(--secondary);
-  margin-bottom: 40px;
-}
-
-.section p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* ---------- Image Captions ---------- */
-figure {
-  margin: 40px auto;
-  text-align: center;
-  max-width: 700px;
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:2rem 0}
+.card{
+  background: rgba(255,255,255,.03);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:1rem;
   box-shadow: var(--shadow);
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--card-bg);
+}
+.card h4{margin:.2rem 0 .6rem}
+.card-link{display:inline-block;margin-top:.4rem}
+
+.grid.two{display:grid;grid-template-columns:1.2fr .9fr;gap:1.4rem}
+.gallery{display:grid;gap:1rem;align-content:start}
+
+.pull{
+  border-left:4px solid var(--brand);
+  padding:.5rem .9rem;
+  color:var(--muted);
+  background: rgba(255,255,255,.03);
+  border-radius:8px;
 }
 
-figure img {
-  width: 100%;
-  display: block;
+/* Timeline */
+.timeline{list-style:none;padding:0;margin:1rem 0;border-left:2px dashed var(--line)}
+.timeline li{
+  position:relative;padding:.6rem 0 .6rem 1rem;margin-left:.6rem;
+}
+.timeline li::before{
+  content:"";position:absolute;left:-7px;top:1.1rem;width:10px;height:10px;border-radius:50%;
+  background: var(--brand);
+  box-shadow:0 0 0 3px rgba(74,168,255,.25);
+}
+.timeline .date{display:inline-block;font-weight:700;color:#fff;margin-right:.4rem}
+
+/* Footer */
+.site-footer{
+  margin-top:2rem;border-top:1px solid var(--line);
+  background: rgba(10,15,31,.7);
+}
+.site-footer p{margin:0;padding:1rem 0;color:var(--muted)}
+
+/* Responsive */
+@media (max-width: 860px){
+  .grid.two{grid-template-columns:1fr;gap:1rem}
+  .hero{grid-template-columns:1fr}
 }
 
-figcaption {
-  background: var(--secondary);
-  color: white;
-  padding: 12px;
-  font-size: 0.95em;
-}
-
-/* ---------- Footer ---------- */
-footer {
-  background: var(--secondary);
-  color: var(--text-light);
-  text-align: center;
-  padding: 30px 10px;
-  margin-top: 80px;
-  font-size: 0.9em;
-}
-
-/* ---------- Timeline ---------- */
-.timeline {
-  max-width: 800px;
-  margin: 0 auto;
-  border-left: 4px solid var(--accent);
-  padding-left: 30px;
-}
-
-.timeline-event {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.timeline-event::before {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 8px;
-  width: 14px;
-  height: 14px;
-  background: var(--accent);
-  border-radius: 50%;
-}
-
-.timeline-event h3 {
-  color: var(--secondary);
-  margin-bottom: 5px;
-}
-
-.timeline-event p {
-  color: var(--text-dark);
-}
-
-/* ---------- Responsiveness ---------- */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  .hero-content h2 {
-    font-size: 2.2em;
-  }
+@media (max-width: 720px){
+  nav .nav{display:none;flex-direction:column;gap:.25rem;background:rgba(10,15,31,.95);padding:.6rem;border-radius:12px;border:1px solid var(--line)}
+  .nav-toggle{display:inline-block;margin-left:auto}
+  nav[aria-expanded="true"] .nav{display:flex}
 }
