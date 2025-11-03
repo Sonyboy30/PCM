@@ -2,70 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Legacy & Significance | Panama Canal Museum</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/script.js"></script>
 </head>
-<body data-page="significance">
-  <a class="skip-link" href="#main">Skip to content</a>
-
+<body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
-      <nav aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="historical.html">Historical Background</a></li>
-          <li><a href="construction.html">Construction &amp; Challenges</a></li>
-          <li><a href="impact.html">Social &amp; Political Impact</a></li>
-          <li><a href="significance.html">Legacy &amp; Significance</a></li>
-          <li><a href="timeline.html">Timeline</a></li>
-          <li><a href="plaque.html">Plaque</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction &amp; Challenges</a>
+      <a href="impact.html">Social &amp; Political Impact</a>
+      <a href="significance.html" aria-current="page">Legacy &amp; Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-header">
-      <h2>Legacy &amp; Significance</h2>
-      <p>Opened in 1914, the Panama Canal remains a vital artery for world commerce and a touchstone of twentieth-century history.</p>
-    </header>
+  <main class="container prose">
+    <h1>Legacy &amp; Significance</h1>
+    <p>Opened in 1914, the canal reconfigured maritime routes, accelerated trade, and became a symbol of engineering prowess—alongside enduring debates over power and equity. Modern expansions and water-management challenges continue to shape its future.</p>
 
-    <section class="grid two">
-      <div>
-        <h3>Enduring Impact</h3>
-        <p>
-          Recognized among the “wonders of the modern world,” the Canal continues to shorten sea routes and anchor port economies.
-          Modern expansions and environmental challenges keep its story current.
-        </p>
+    <figure class="full-bleed">
+      <img src="assets/first-ship.jpg" alt="SS Ancon transiting the canal in 1914" />
+      <figcaption>SS <em>Ancon</em>, the first official transit, August 15, 1914.</figcaption>
+    </figure>
 
-        <blockquote class="pull">
-          “The canal was not just a triumph of engineering — it was a statement of power.”
-        </blockquote>
-
-        <h3>Memory &amp; Reflection</h3>
-        <p>
-          The project’s legacy includes hard questions about labor systems, sovereignty, and public health — lessons that still shape
-          large infrastructure projects today.
-        </p>
-      </div>
-
-      <aside class="gallery">
-        <figure>
-          <img src="assets/first-ship.jpg" alt="SS Ancon passing through the Canal on August 15, 1914" />
-          <figcaption>SS <em>Ancon</em>, first official transit — August 15, 1914.</figcaption>
-        </figure>
-      </aside>
-    </section>
+    <blockquote class="pull">
+      “The canal was not just a triumph of engineering—it was a statement of power.”
+    </blockquote>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
-    </div>
+    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
