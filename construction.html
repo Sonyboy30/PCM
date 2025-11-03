@@ -2,83 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Construction & Challenges | Panama Canal Museum</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/script.js"></script>
 </head>
-<body data-page="construction">
-  <a class="skip-link" href="#main">Skip to content</a>
-
+<body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
-      <nav aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="historical.html">Historical Background</a></li>
-          <li><a href="construction.html">Construction &amp; Challenges</a></li>
-          <li><a href="impact.html">Social &amp; Political Impact</a></li>
-          <li><a href="significance.html">Legacy &amp; Significance</a></li>
-          <li><a href="timeline.html">Timeline</a></li>
-          <li><a href="plaque.html">Plaque</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html" aria-current="page">Construction &amp; Challenges</a>
+      <a href="impact.html">Social &amp; Political Impact</a>
+      <a href="significance.html">Legacy &amp; Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-header">
-      <h2>Construction &amp; Challenges</h2>
-      <p>From redesigning the canal to conquering disease and landslides, the build tested every facet of engineering and public health.</p>
-    </header>
+  <main class="container prose">
+    <h1>Construction &amp; Challenges</h1>
+    <p>The American phase began in 1904 under John Stevens, later George W. Goethals. Abandoning a sea-level plan, engineers built paired locks lifting ships to Gatún Lake. Dr. William Gorgas’s sanitation campaign targeted mosquitoes, slashing yellow fever and malaria.</p>
+    <p>Crews faced landslides at Culebra Cut, dynamite risks, heavy tropical rain, and extreme heat. By 1913, hundreds of millions of cubic yards had been moved; locks, dams, railways, and power systems were integrated into a coordinated whole.</p>
 
-    <section class="grid two">
-      <div>
-        <h3>Design &amp; Engineering</h3>
-        <p>
-          After the French failure, the U.S. adopted a lock-based system to raise ships to Gatún Lake and down again,
-          overcoming elevation and controlling the Chagres River. Chief Engineers John Stevens and later
-          George Washington Goethals coordinated a vast operation of railroads, dams, and concrete.
-        </p>
-
-        <h3>Health &amp; Safety</h3>
-        <p>
-          Malaria and yellow fever initially devastated the workforce. Under Dr. William Gorgas, sanitation campaigns
-          drained standing water, screened buildings, and fumigated — dramatically reducing disease.
-        </p>
-
-        <h3>Earthworks &amp; Risk</h3>
-        <p>
-          The Culebra Cut required relentless excavation and constant rebuilding after landslides. Thousands of workers
-          labored in intense heat around explosives, steam shovels, and trains.
-        </p>
-      </div>
-
-      <aside class="gallery">
-        <figure>
-          <img src="assets/culebra-cut.jpg" alt="Deep excavation through Culebra Cut with work trains" />
-          <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/gorgas-map.jpg" alt="Public health map/diagram used by Dr. Gorgas to target mosquito zones" />
-          <figcaption>Dr. William Gorgas’s disease-control mapping and protocols.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/workers.jpg" alt="Mixed nationalities of Canal workers at a construction yard" />
-          <figcaption>International labor made the project possible.</figcaption>
-        </figure>
-      </aside>
-    </section>
+    <div class="media-grid">
+      <figure>
+        <img src="assets/culebra-cut.jpg" alt="Excavation at Culebra Cut" />
+        <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gorgas-map.jpg" alt="Map/diagram of mosquito sanitation measures by Dr. Gorgas" />
+        <figcaption>Gorgas’s disease-control plan.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/workers.jpg" alt="International workers at the canal" />
+        <figcaption>Thousands of international workers made it possible.</figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
-    </div>
+    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
