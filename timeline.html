@@ -2,78 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Timeline | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body> 
-<header class="site-header">
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Timeline</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html">Historical Background</a>
-    <a href="construction.html">Construction &amp; Challenges</a>
-    <a href="impact.html">Social &amp; Political Impact</a>
-    <a href="significance.html">Legacy &amp; Significance</a>
-    <a href="timeline.html" class="active">Timeline</a>
-    <a href="plaque.html" class="cta">Plaque</a>
-  </nav>
-</header>
+<body data-page="timeline">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="timeline">
-    <!-- pulled/condensed from PBS American Experience timeline -->
-    <div class="t-item">
-      <time>1869</time>
-      <h3>Suez Completed; U.S. Surveys Central America</h3>
-      <p>Ferdinand de Lesseps finishes Suez; U.S. commissions early canal route studies.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="t-item">
-      <time>1879–1888</time>
-      <h3>French Attempt in Panama</h3>
-      <p>Sea-level plan falters amid landslides, yellow fever, and bankruptcy.</p>
-    </div>
-    <div class="t-item">
-      <time>1903</time>
-      <h3>Panama Independence &amp; Canal Treaty</h3>
-      <p>U.S. recognizes Panama; Hay–Bunau-Varilla Treaty grants canal rights.</p>
-    </div>
-    <div class="t-item">
-      <time>1904–1906</time>
-      <h3>Start of U.S. Effort; Public Health Offensive</h3>
-      <p>John Wallace then John Stevens lead; Dr. Gorgas’ mosquito control ends yellow fever by late 1905.</p>
-    </div>
-    <div class="t-item">
-      <time>1907–1912</time>
-      <h3>Goethals; Culebra Cut &amp; Locks</h3>
-      <p>Round-the-clock excavation and concrete locks at Gatún, Pedro Miguel, Miraflores.</p>
-    </div>
-    <div class="t-item">
-      <time>1913</time>
-      <h3>Waterway Connected</h3>
-      <p>Final dike blasts; continuous channel from ocean to ocean.</p>
-    </div>
-    <div class="t-item">
-      <time>Aug 15, 1914</time>
-      <h3>Canal Opens</h3>
-      <p>SS <em>Ancon</em> transits; WWI mutes celebrations.</p>
-    </div>
-    <div class="t-item">
-      <time>1977 → 1999</time>
-      <h3>Treaties &amp; Handover</h3>
-      <p>Torrijos–Carter agreements lead to full Panamanian control in 1999.</p>
-    </div>
+  </header>
 
-    <aside class="source-note">Source: PBS American Experience — “Creating the Canal” timeline.</aside>
-  </article>
-</main>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Timeline</h2>
+      <p>Milestones from vision to completion and beyond.</p>
+    </header>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script>
+    <ol class="timeline">
+      <li><span class="date">1500s</span> Early proposals to link the oceans across the isthmus.</li>
+      <li><span class="date">1880–1889</span> French attempt led by Ferdinand de Lesseps fails.</li>
+      <li><span class="date">1903</span> U.S. assumes control; lock-canal plan advances.</li>
+      <li><span class="date">1904–1913</span> Massive excavation, dams, locks, and disease control.</li>
+      <li><span class="date">Aug 15, 1914</span> Official opening; SS <em>Ancon</em> transits.</li>
+      <li><span class="date">1977–1999</span> Treaties lead to full Panamanian control.</li>
+    </ol>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
 </body>
 </html>
