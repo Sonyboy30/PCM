@@ -2,42 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Timeline | Panama Canal Museum</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
+    <a class="logo" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
       <a href="index.html">Home</a>
       <a href="historical.html">Historical Background</a>
       <a href="construction.html">Construction &amp; Challenges</a>
       <a href="impact.html">Social &amp; Political Impact</a>
       <a href="significance.html">Legacy &amp; Significance</a>
-      <a href="timeline.html" aria-current="page">Timeline</a>
+      <a href="timeline.html" class="active">Timeline</a>
       <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="prose">Timeline</h1>
-    <ol class="timeline">
-      <li><span class="t-year">1500s</span> Early visions for an isthmian route.</li>
-      <li><span class="t-year">1880s</span> French sea-level attempt fails (disease, landslides, finances).</li>
-      <li><span class="t-year">1903</span> Panama’s independence; U.S. secures rights to build.</li>
-      <li><span class="t-year">1904</span> U.S. construction begins; shift to lock design.</li>
-      <li><span class="t-year">1913</span> Culebra Cut breakthrough; systems integrated.</li>
-      <li><span class="t-year">1914</span> Official opening; SS <em>Ancon</em> transits.</li>
-      <li><span class="t-year">1977–1999</span> Treaties and transfer of control to Panama.</li>
-      <li><span class="t-year">2016</span> Expansion opens to New Panamax vessels.</li>
-    </ol>
+  <main class="wrapper">
+    <h1>Timeline</h1>
+    <p class="prose">
+      Key moments from vision to opening, paraphrased from PBS’s “Creating the Canal” timeline and standard references.
+    </p>
+
+    <section class="timeline fade-in" id="timeline">
+      <!-- Each item expands on click -->
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1869</h3>
+        <p class="t-title">Suez Canal completed; U.S. interest in an isthmian canal grows</p>
+        <div class="t-body">
+          French success in Egypt inspires surveys in Central America and fuels the idea of a cross-isthmus route.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1880s</h3>
+        <p class="t-title">French sea-level attempt begins and fails</p>
+        <div class="t-body">
+          Floods, landslides, and disease overwhelm the project; finances collapse and work ends by 1889.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1903</h3>
+        <p class="t-title">Panama becomes independent; treaty grants U.S. rights to build</p>
+        <div class="t-body">
+          The Hay-Bunau-Varilla agreement provides a zone to construct and operate the waterway.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1904–1906</h3>
+        <p class="t-title">American reorganization and sanitation</p>
+        <div class="t-body">
+          John Stevens revamps rail haulage; William Gorgas reduces yellow fever and malaria through vector control.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1907–1911</h3>
+        <p class="t-title">Goethals leads heavy excavation and lock works</p>
+        <div class="t-body">
+          Culebra Cut advances; Gatun Dam and the lock complexes rise as core structures.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1913</h3>
+        <p class="t-title">Waterway connected</p>
+        <div class="t-body">
+          The channel reaches through; the system nears operational readiness.
+        </div>
+      </article>
+
+      <article class="t-item" tabindex="0">
+        <h3 class="t-year">1914</h3>
+        <p class="t-title">Official opening</p>
+        <div class="t-body">
+          SS <i>Ancon</i> makes the first official transit on August 15, 1914.
+        </div>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    <div class="wrapper">
+      <p>Created by Arav &amp; Deniz</p>
+      <nav class="footer-nav">
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
-  <script src="js/script.js"></script>
 </body>
 </html>
