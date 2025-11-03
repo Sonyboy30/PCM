@@ -1,32 +1,18 @@
-// Toggle mobile nav
+// Mobile nav toggle (accessible)
 const toggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('header nav');
+const nav = document.querySelector('#site-nav');
+
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
-    nav.setAttribute('aria-expanded', String(!expanded));
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-}
 
-// Active link highlight
-(function highlightActive(){
-  const pageKey = document.body.getAttribute('data-page');
-  const map = {
-    home: 'index.html',
-    historical: 'historical.html',
-    construction: 'construction.html',
-    impact: 'impact.html',
-    significance: 'significance.html',
-    timeline: 'timeline.html',
-    plaque: 'plaque.html'
-  };
-  const current = map[pageKey];
-  if (!current) return;
-  document.querySelectorAll('.nav a').forEach(a=>{
-    if (a.getAttribute('href') === current){
-      a.classList.add('active');
-      a.setAttribute('aria-current','page');
+  // Close when clicking outside on mobile
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && e.target !== toggle && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
-})();
+}
