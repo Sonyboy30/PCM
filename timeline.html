@@ -2,52 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Timeline | Panama Canal Museum</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/script.js"></script>
 </head>
-<body data-page="timeline">
-  <a class="skip-link" href="#main">Skip to content</a>
-
+<body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
-      <nav aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="historical.html">Historical Background</a></li>
-          <li><a href="construction.html">Construction &amp; Challenges</a></li>
-          <li><a href="impact.html">Social &amp; Political Impact</a></li>
-          <li><a href="significance.html">Legacy &amp; Significance</a></li>
-          <li><a href="timeline.html">Timeline</a></li>
-          <li><a href="plaque.html">Plaque</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction &amp; Challenges</a>
+      <a href="impact.html">Social &amp; Political Impact</a>
+      <a href="significance.html">Legacy &amp; Significance</a>
+      <a href="timeline.html" aria-current="page">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-header">
-      <h2>Timeline</h2>
-      <p>Milestones from vision to completion and beyond.</p>
-    </header>
-
+  <main class="container">
+    <h1 class="prose">Timeline</h1>
     <ol class="timeline">
-      <li><span class="date">1500s</span> Early proposals to link the oceans across the isthmus.</li>
-      <li><span class="date">1880–1889</span> French attempt led by Ferdinand de Lesseps fails.</li>
-      <li><span class="date">1903</span> U.S. assumes control; lock-canal plan advances.</li>
-      <li><span class="date">1904–1913</span> Massive excavation, dams, locks, and disease control.</li>
-      <li><span class="date">Aug 15, 1914</span> Official opening; SS <em>Ancon</em> transits.</li>
-      <li><span class="date">1977–1999</span> Treaties lead to full Panamanian control.</li>
+      <li><span class="t-year">1500s</span> Early visions for an isthmian route.</li>
+      <li><span class="t-year">1880s</span> French sea-level attempt fails (disease, landslides, finances).</li>
+      <li><span class="t-year">1903</span> Panama’s independence; U.S. secures rights to build.</li>
+      <li><span class="t-year">1904</span> U.S. construction begins; shift to lock design.</li>
+      <li><span class="t-year">1913</span> Culebra Cut breakthrough; systems integrated.</li>
+      <li><span class="t-year">1914</span> Official opening; SS <em>Ancon</em> transits.</li>
+      <li><span class="t-year">1977–1999</span> Treaties and transfer of control to Panama.</li>
+      <li><span class="t-year">2016</span> Expansion opens to New Panamax vessels.</li>
     </ol>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
-    </div>
+    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
