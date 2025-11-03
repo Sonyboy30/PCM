@@ -1,73 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Construction & Challenges | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
   <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html" class="active">Construction &amp; Challenges</a>
-      <a href="impact.html">Social &amp; Political Impact</a>
-      <a href="significance.html">Legacy &amp; Significance</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="plaque.html">Plaque</a>
-      <a href="bibliography.html">Bibliography</a>
-    </nav>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Panama Canal Museum</a>
+      <nav class="main-nav">
+        <a href="historical.html">Historical Background</a>
+        <a class="active" href="construction.html">Construction &amp; Challenges</a>
+        <a href="impact.html">Social &amp; Political Impact</a>
+        <a href="significance.html">Legacy &amp; Significance</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+    </div>
   </header>
 
-  <main class="wrapper prose">
-    <h1>Construction &amp; Challenges</h1>
-    <p>
-      Work began in 1904 with Chief Engineer John Wallace, then John Stevens, and later George Washington Goethals.
-      The redesign to a lock canal allowed ships to be raised to Gatun Lake and lowered to sea level on each side.
-      Sanitary officer William Gorgas led mosquito control that reduced yellow fever and malaria.
-    </p>
+  <section class="page-head parallax-soft" data-parallax-speed="0.15">
+    <div class="container">
+      <h1>Construction &amp; Challenges</h1>
+      <p>From Culebra Cut to the locks and dams, disease control, landslides, and daily risk defined the build.</p>
+    </div>
+  </section>
 
-    <section class="grid grid-3 gallery fade-in">
-      <figure class="frame">
-        <img src="assets/culebra-cut.jpg" alt="Culebra Cut excavation" data-cap="Culebra Cut was the most difficult excavation due to slides." />
-        <figcaption>Culebra Cut required around-the-clock excavation.</figcaption>
-      </figure>
-      <figure class="frame">
-        <img src="assets/gorgas-map.jpg" alt="Map of areas sanitized against malaria mosquitoes" data-cap="Areas sanitized against malaria mosquitoes, an anti-vector map." />
-        <figcaption>Anti-mosquito sanitation reduced disease.</figcaption>
-      </figure>
-      <figure class="frame">
-        <img class="img-small" src="assets/first-ship.jpg" alt="SS Ancon first official transit" data-cap="SS Ancon during the first official transit on August 15, 1914." />
-        <figcaption>SS <i>Ancon</i> first official transit, 1914.</figcaption>
-      </figure>
+  <main class="container">
+    <section class="content-two-col reveal">
+      <div>
+        <h2>Culebra Cut</h2>
+        <p>Excavation through the continental divide demanded round-the-clock work and constant responses to landslides.</p>
+        <figure class="media">
+          <img src="assets/culebra-cut.jpg" alt="Culebra Cut excavation with rail lines and shovels" data-cap="Culebra Cut: the most difficult excavation.">
+          <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Public Health</h2>
+        <p>Sanitation campaigns targeted mosquito breeding, reducing yellow fever and malaria, and enabling sustained progress.</p>
+        <figure class="media">
+          <img src="assets/gorgas-map.jpg" alt="Public health mosquito map used for sanitation planning" data-cap="Areas targeted in anti-mosquito campaigns.">
+          <figcaption>Areas targeted in anti-mosquito campaigns.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <h2>Artifacts</h2>
-    <ul class="artifacts fade-in">
-      <li><strong>Steam shovel bucket</strong> — symbol of mass earth-moving in the Cut.</li>
-      <li><strong>Lock control panel sketch</strong> — shows electric operation of massive gates.</li>
-      <li><strong>Sanitation crew spray canister</strong> — represents public health engineering.</li>
-    </ul>
+    <section class="content-wide reveal">
+      <h2>Locks and Dams</h2>
+      <p>Engineers built paired locks to raise and lower ships using gravity-fed culverts and gates, an example of Progressive Era faith in expert planning.</p>
+      <div class="gallery">
+        <figure class="media media--sm">
+          <img src="assets/first-ship.jpg" alt="SS Ancon entering the locks in 1914" data-cap="SS <i>Ancon</i>, first official transit, August 15, 1914.">
+          <figcaption>SS <i>Ancon</i>, first official transit, August 15, 1914.</figcaption>
+        </figure>
+        <figure class="media">
+          <img src="assets/workers.jpg" alt="Crew positioning concrete forms for lock chambers" data-cap="Crews poured millions of cubic yards of concrete.">
+          <figcaption>Crews poured millions of cubic yards of concrete.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="quote-panel reveal">
+      <blockquote>
+        <p>“[Primary-source excerpt placeholder — edit text].”</p>
+        <cite>— U.S. Office of the Historian document (primary)</cite>
+      </blockquote>
+    </section>
+
+    <div class="page-cta">
+      <a class="btn btn-primary" href="impact.html">Next: Social &amp; Political Impact</a>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>Created by Arav &amp; Deniz</p>
-      <nav class="footer-nav">
-        <a href="timeline.html">Timeline</a>
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-    </div>
+    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close">×</button>
-    <img class="lightbox-img" alt="" />
-    <figcaption class="lightbox-cap"></figcaption>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image"></button>
+    <img class="lightbox-img" alt="">
+    <p class="lightbox-cap"></p>
   </div>
 </body>
 </html>
