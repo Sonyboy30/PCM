@@ -2,52 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Legacy & Significance | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-<header class="site-header">
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Legacy &amp; Significance</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html">Historical Background</a>
-    <a href="construction.html">Construction &amp; Challenges</a>
-    <a href="impact.html">Social &amp; Political Impact</a>
-    <a href="significance.html" class="active">Legacy &amp; Significance</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="plaque.html" class="cta">Plaque</a>
-  </nav>
-</header>
+<body data-page="significance">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="prose">
-    <h2>Why the Canal Still Matters</h2>
-    <p>
-      The canal re-mapped global trade in 1914 and continues to shape shipping routes and supply chains.
-      Transfer to Panamanian control (1999) and later expansions underscore its evolving role as both
-      national asset and global utility.
-    </p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h3>Progressive Era Takeaways</h3>
-    <ul>
-      <li>State capacity: coordination of engineering, medicine, logistics, and labor at scale.</li>
-      <li>Public health: mosquito control as a model for preventive infrastructure.</li>
-      <li>Power &amp; principle: tension between modernization and imperial reach.</li>
-    </ul>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Legacy &amp; Significance</h2>
+      <p>Opened in 1914, the Panama Canal remains a vital artery for world commerce and a touchstone of twentieth-century history.</p>
+    </header>
 
-    <aside class="source-note">
-      Based on: History.com; U.S. State Dept.; PBS American Experience timeline.
-    </aside>
-  </article>
-</main>
+    <section class="grid two">
+      <div>
+        <h3>Enduring Impact</h3>
+        <p>
+          Recognized among the “wonders of the modern world,” the Canal continues to shorten sea routes and anchor port economies.
+          Modern expansions and environmental challenges keep its story current.
+        </p>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script>
+        <blockquote class="pull">
+          “The canal was not just a triumph of engineering — it was a statement of power.”
+        </blockquote>
+
+        <h3>Memory &amp; Reflection</h3>
+        <p>
+          The project’s legacy includes hard questions about labor systems, sovereignty, and public health — lessons that still shape
+          large infrastructure projects today.
+        </p>
+      </div>
+
+      <aside class="gallery">
+        <figure>
+          <img src="assets/first-ship.jpg" alt="SS Ancon passing through the Canal on August 15, 1914" />
+          <figcaption>SS <em>Ancon</em>, first official transit — August 15, 1914.</figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
 </body>
 </html>
