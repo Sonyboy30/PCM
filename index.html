@@ -2,70 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Panama Canal Museum | Home</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-  <link rel="preload" href="style.css" as="style" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="assets/hero-canal.jpg" as="image">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="brand">
-      <h1>Panama Canal Museum</h1>
-      <p class="tag">The Dream · The Struggle · The Legacy</p>
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html">Construction &amp; Challenges</a>
-      <a href="impact.html">Social &amp; Political Impact</a>
-      <a href="significance.html">Legacy &amp; Significance</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="plaque.html" class="cta">Plaque</a>
-    </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
-      <!-- keep your existing hero image name if you have it; otherwise this block still looks good without an image -->
-      <div class="hero-image" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <h2 class="fade-up">Welcome</h2>
-        <p class="lead fade-up delay-1">
-          Explore how ambition, innovation, and public health transformed a narrow isthmus into one of the most
-          influential trade corridors in the world.
-        </p>
-        <div class="cta-row fade-up delay-2">
-          <a class="btn" href="historical.html">Start with the Background</a>
-          <a class="btn ghost" href="timeline.html">Browse the Timeline</a>
-        </div>
+      <figure class="hero-figure">
+        <img src="assets/hero-canal.jpg" alt="Aerial view of the Panama Canal and its locks" />
+        <figcaption>Aerial view of the Panama Canal — image for educational use</figcaption>
+      </figure>
+      <div class="hero-text">
+        <h2>The Dream, The Struggle, The Legacy</h2>
+        <p>Explore the triumphs and tensions behind one of the 20th century’s greatest engineering achievements.</p>
+        <p><a class="btn" href="historical.html">Experience the Canal</a></p>
       </div>
     </section>
 
-    <section class="grid two-col">
+    <section class="intro wrap">
+      <h3>Welcome</h3>
+      <p>
+        The Panama Canal stands as one of humanity’s most impressive engineering feats. Explore how ambition, innovation,
+        public health, labor, and geopolitics shaped its creation and lasting impact on global trade.
+      </p>
+      <p>
+        Built in the early 1900s, the Canal reshaped maritime routes by linking the Atlantic and Pacific Oceans.
+        Its story is one of determination, disease control, politics, segregation, and progress — a symbol of both
+        human ingenuity and imperial ambition.
+      </p>
+    </section>
+
+    <section class="cards wrap">
       <article class="card">
-        <h3>Progressive Era Context</h3>
-        <p>
-          The Canal’s story sits squarely inside the Progressive Era: technocratic problem-solving,
-          public-health breakthroughs, and an energetic presidency that expanded U.S. power abroad.
-        </p>
-        <a href="impact.html" class="text-link">See social &amp; political impact →</a>
+        <h4>Historical Background</h4>
+        <p>From early visions to the failed French attempt and Roosevelt’s pivot to a lock-based canal.</p>
+        <a class="card-link" href="historical.html" aria-label="Read Historical Background">Learn more</a>
       </article>
 
       <article class="card">
-        <h3>Engineering &amp; Health</h3>
-        <p>
-          From lock-design to draining mosquito pools, the project mixed heavy engineering with epidemiology—
-          a blueprint for modern mega-projects.
-        </p>
-        <a href="construction.html" class="text-link">How they built it →</a>
+        <h4>Construction &amp; Challenges</h4>
+        <p>Excavation at Culebra Cut, dams and locks, mosquito control, and day-to-day hazards.</p>
+        <a class="card-link" href="construction.html" aria-label="Read Construction and Challenges">Learn more</a>
+      </article>
+
+      <article class="card">
+        <h4>Social &amp; Political Impact</h4>
+        <p>Labor systems, segregation and pay, sovereignty, and U.S.–Panama relations.</p>
+        <a class="card-link" href="impact.html" aria-label="Read Social and Political Impact">Learn more</a>
+      </article>
+
+      <article class="card">
+        <h4>Legacy &amp; Significance</h4>
+        <p>A lasting artery of global trade, evolving governance, and modern expansions.</p>
+        <a class="card-link" href="significance.html" aria-label="Read Legacy and Significance">Learn more</a>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
   </footer>
-
- <script src="js/script.js" defer></script>
 </body>
 </html>
