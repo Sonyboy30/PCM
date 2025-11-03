@@ -2,75 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Historical Background | Panama Canal Museum</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/script.js"></script>
 </head>
-<body data-page="historical">
-  <a class="skip-link" href="#main">Skip to content</a>
-
+<body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
-      <nav aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="historical.html">Historical Background</a></li>
-          <li><a href="construction.html">Construction &amp; Challenges</a></li>
-          <li><a href="impact.html">Social &amp; Political Impact</a></li>
-          <li><a href="significance.html">Legacy &amp; Significance</a></li>
-          <li><a href="timeline.html">Timeline</a></li>
-          <li><a href="plaque.html">Plaque</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html" aria-current="page">Historical Background</a>
+      <a href="construction.html">Construction &amp; Challenges</a>
+      <a href="impact.html">Social &amp; Political Impact</a>
+      <a href="significance.html">Legacy &amp; Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-header">
-      <h2>Historical Background</h2>
-      <p>The dream of linking the Atlantic and Pacific through Panama dates to the 1500s,
-         but only the twentieth century marshaled the technology, capital, and political will to finish the job.</p>
-    </header>
+  <main class="container prose">
+    <h1>Historical Background</h1>
+    <p>The dream of linking the Atlantic and Pacific through Panama dates to the 1500s. In the 1880s, French engineer Ferdinand de Lesseps—builder of the Suez Canal—attempted a sea-level canal, but disease, landslides, and financial collapse ended the effort.</p>
+    <p>In 1903, the United States supported Panama’s independence from Colombia and secured rights to build. Shifting to a lock-based design, construction formally began in 1904 and culminated in the canal’s 1914 opening—reshaping world trade and projecting U.S. power.</p>
 
-    <section class="grid two">
-      <div>
-        <p>
-          In the late 19th century, French engineer Ferdinand de Lesseps — builder of the Suez Canal —
-          led the first modern attempt in Panama. Tropical disease, landslides, and financing problems doomed the project.
-        </p>
-        <p>
-          In 1903, the United States under President Theodore Roosevelt took control after supporting Panamanian independence.
-          A lock-based design replaced the French sea-level plan, and by August 1914 the Canal opened to traffic,
-          fundamentally transforming global trade and foreshadowing a new era of American power.
-        </p>
-      </div>
-
-      <aside class="gallery">
-        <figure>
-          <img src="assets/french-failure.jpg" alt="French excavation machinery amid jungle and mud in the 1880s" />
-          <figcaption>French engineers struggle in tropical terrain, 1880s.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/roosevelt-visit.jpg" alt="Theodore Roosevelt inspecting Panama works in 1906" />
-          <figcaption>President Roosevelt’s 1906 visit boosted morale and momentum.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="assets/workers.jpg" alt="Canal workers from the Caribbean and Latin America standing together" />
-          <figcaption>Workers arrived from across the Caribbean and Latin America.</figcaption>
-        </figure>
-      </aside>
-    </section>
+    <div class="media-grid">
+      <figure>
+        <img src="assets/french-failure.jpg" alt="French engineers in difficult tropical excavation terrain" />
+        <figcaption>French efforts struggled with landslides and disease, 1880s.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/roosevelt-visit.jpg" alt="President Theodore Roosevelt touring the Canal Zone in 1906" />
+        <figcaption>Roosevelt’s 1906 visit signaled political will.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/workers.jpg" alt="Canal workers from across the Caribbean and Latin America" />
+        <figcaption>International labor underpinned the project.</figcaption>
+      </figure>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
-    </div>
+    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
