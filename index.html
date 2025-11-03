@@ -2,71 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Panama Canal Museum | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
+  <!-- Site Header -->
   <header class="site-header">
-    <a class="brand" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
-      <a href="index.html" aria-current="page">Home</a>
+    <a class="logo" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
       <a href="historical.html">Historical Background</a>
       <a href="construction.html">Construction &amp; Challenges</a>
       <a href="impact.html">Social &amp; Political Impact</a>
       <a href="significance.html">Legacy &amp; Significance</a>
       <a href="timeline.html">Timeline</a>
       <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="assets/hero-canal.jpg" alt="Aerial view of the Panama Canal and locks" />
-      <div class="hero-text">
-        <h1>The Dream, The Struggle, The Legacy</h1>
-        <p>Explore the triumphs and tensions behind one of the 20th century’s greatest engineering achievements.</p>
-        <p><a class="btn" href="historical.html">Experience the Canal</a></p>
+  <!-- Hero with background image -->
+  <section class="hero" data-hero="hero-canal.jpg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">The Dream, the Struggle, the Legacy</h1>
+      <p class="hero-sub">How the Panama Canal reshaped trade during the Progressive Era</p>
+      <div class="hero-actions">
+        <a class="btn" href="historical.html">Start with Background</a>
+        <a class="btn btn-secondary" href="timeline.html">See the Timeline</a>
       </div>
-    </section>
+      <p class="hero-credit">Aerial view of the Panama Canal — image for educational use</p>
+    </div>
+  </section>
 
-    <section class="container grid-3">
+  <!-- 4 feature cards -->
+  <main class="wrapper">
+    <section class="grid grid-4 fade-in">
       <article class="card">
-        <h2>Historical Background</h2>
-        <p>From early visions to the failed French attempt and Roosevelt’s pivot to a lock-based canal.</p>
-        <p><a class="link" href="historical.html">Learn more</a></p>
+        <h3>Historical Background</h3>
+        <p>From early schemes to the failed French effort and the United States decision to build a lock canal.</p>
+        <a class="text-link" href="historical.html">Learn more</a>
       </article>
       <article class="card">
-        <h2>Construction &amp; Challenges</h2>
-        <p>Culebra Cut, dams and locks, mosquito control, and day-to-day hazards.</p>
-        <p><a class="link" href="construction.html">Learn more</a></p>
+        <h3>Construction &amp; Challenges</h3>
+        <p>Culebra Cut, locks and dams, disease control, landslides, and daily hazards on the isthmus.</p>
+        <a class="text-link" href="construction.html">Learn more</a>
       </article>
       <article class="card">
-        <h2>Social &amp; Political Impact</h2>
-        <p>Labor systems, segregation and pay, sovereignty, and U.S.–Panama relations.</p>
-        <p><a class="link" href="impact.html">Learn more</a></p>
-      </article>
-    </section>
-
-    <section class="container grid-2">
-      <article class="card">
-        <h2>Legacy &amp; Significance</h2>
-        <p>A lasting artery of global trade, evolving governance, and modern expansions.</p>
-        <p><a class="link" href="significance.html">Learn more</a></p>
+        <h3>Social &amp; Political Impact</h3>
+        <p>Labor systems, pay scales, segregation, sovereignty, and U.S.–Panama relations.</p>
+        <a class="text-link" href="impact.html">Learn more</a>
       </article>
       <article class="card">
-        <h2>Interactive Timeline</h2>
-        <p>Follow key milestones from the 1500s vision to the 1914 opening and beyond.</p>
-        <p><a class="link" href="timeline.html">Open timeline</a></p>
+        <h3>Legacy &amp; Significance</h3>
+        <p>Why the Canal mattered to the Progressive Era and how it continues to shape global trade.</p>
+        <a class="text-link" href="significance.html">Learn more</a>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    <div class="wrapper">
+      <p>Created by Arav &amp; Deniz • © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <!-- Lightbox Modal -->
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" alt="" />
+    <figcaption class="lightbox-cap"></figcaption>
+  </div>
 </body>
 </html>
