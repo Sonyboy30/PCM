@@ -2,52 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Social & Political Impact | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body> 
-<header class="site-header">
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Social &amp; Political Impact</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html">Historical Background</a>
-    <a href="construction.html">Construction &amp; Challenges</a>
-    <a href="impact.html" class="active">Social &amp; Political Impact</a>
-    <a href="significance.html">Legacy &amp; Significance</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="plaque.html" class="cta">Plaque</a>
-  </nav>
-</header>
+<body data-page="impact">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="prose">
-    <h2>Workforce, Wages, and the Zone</h2>
-    <p>
-      Tens of thousands of workers—many from the Caribbean and Latin America—kept the project moving.
-      Canal Zone policies created inequities in pay and housing that reflected broader hierarchies of the
-      era. Progressive-Era efficiency coexisted with segregation and coercive control.
-    </p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h3>Politics of Canal Making</h3>
-    <p>
-      U.S. recognition of Panama (1903) and the Hay–Bunau-Varilla Treaty secured a Canal Zone under U.S.
-      control. The project strengthened the modern presidency and showcased American capacity—but also
-      raised questions about sovereignty and intervention.
-    </p>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Social &amp; Political Impact</h2>
+      <p>Work, wages, segregation, and sovereignty shaped life in the Canal Zone — and debates far beyond it.</p>
+    </header>
 
-    <aside class="source-note">
-      Based on: History.com; U.S. State Dept. “Building the Panama Canal”; National Archives/Prologue overview.
-    </aside>
-  </article>
-</main>
+    <section class="grid two">
+      <div>
+        <h3>Labor &amp; Segregation</h3>
+        <p>
+          The Canal depended on a diverse workforce under tiered pay and housing systems that reflected the racial and
+          national hierarchies of the era. Caribbean laborers in particular faced lower pay scales and unequal living conditions.
+        </p>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script>
+        <h3>Panama, the U.S., and Sovereignty</h3>
+        <p>
+          The Canal Zone embodied U.S. power in Panama, fueling decades of negotiation and protest. Treaties in the late
+          twentieth century culminated in full Panamanian control by 1999.
+        </p>
+
+        <h3>Global Trade &amp; Strategy</h3>
+        <p>
+          Strategically and economically, the Canal reoriented shipping routes, military logistics, and port development
+          across the Americas and beyond.
+        </p>
+      </div>
+
+      <aside class="gallery">
+        <figure>
+          <img src="assets/workers.jpg" alt="Canal laborers lining up near work trains" />
+          <figcaption>Pay scales and housing mirrored era-specific segregation.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/roosevelt-visit.jpg" alt="Roosevelt touring works: political symbolism of the project" />
+          <figcaption>High-level visits signaled the project’s political stakes.</figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
 </body>
 </html>
