@@ -1,72 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Social & Political Impact | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
   <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html">Construction &amp; Challenges</a>
-      <a href="impact.html" class="active">Social &amp; Political Impact</a>
-      <a href="significance.html">Legacy &amp; Significance</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="plaque.html">Plaque</a>
-      <a href="bibliography.html">Bibliography</a>
-    </nav>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Panama Canal Museum</a>
+      <nav class="main-nav">
+        <a href="historical.html">Historical Background</a>
+        <a href="construction.html">Construction &amp; Challenges</a>
+        <a class="active" href="impact.html">Social &amp; Political Impact</a>
+        <a href="significance.html">Legacy &amp; Significance</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+    </div>
   </header>
 
-  <main class="wrapper prose">
-    <h1>Social &amp; Political Impact</h1>
-    <p>
-      The Canal intertwined engineering with labor and sovereignty. The workforce included thousands from
-      the Caribbean and Latin America who faced hard conditions and a tiered pay system. Politically, the
-      project signaled a stronger American role in the hemisphere and reshaped U.S.–Panama relations.
-    </p>
-
-    <div class="gallery grid grid-2 fade-in">
-      <figure class="frame">
-        <img src="assets/workers.jpg" alt="International workers in Canal Zone" data-cap="Workers from Barbados, Jamaica, and beyond kept excavation moving." />
-        <figcaption>International labor sustained the project.</figcaption>
-      </figure>
-
-      <!-- Added Roosevelt photo here as requested -->
-      <figure class="frame">
-        <img src="assets/roosevelt-visit.jpg" alt="Roosevelt inspecting works in 1906" data-cap="Roosevelt’s 1906 inspection was a political signal of commitment." />
-        <figcaption>Roosevelt’s 1906 inspection underlined policy goals.</figcaption>
-      </figure>
+  <section class="page-head parallax-soft" data-parallax-speed="0.15">
+    <div class="container">
+      <h1>Social &amp; Political Impact</h1>
+      <p>Labor systems, segregation and pay, sovereignty debates, and Progressive Era state capacity.</p>
     </div>
+  </section>
 
-    <h2>Primary Voices</h2>
-    <blockquote class="primary">
-      “There was no yellow fever on the Isthmus after November 1905” <span class="quote-src">Primary: Gorgas’s sanitary reports summarized in official records</span>
-    </blockquote>
-    <blockquote class="primary">
-      “The first official transit was completed by SS <i>Ancon</i> on August 15, 1914” <span class="quote-src">Primary: Opening day photographic record</span>
-    </blockquote>
+  <main class="container">
+    <section class="content-two-col reveal">
+      <div>
+        <h2>Labor and Segregation</h2>
+        <p>The workforce included people from the Caribbean, Latin America, and the United States. Pay grades, housing, and access to services often reflected a segregated system that shaped daily life in the Canal Zone.</p>
+        <figure class="media">
+          <img src="assets/workers.jpg" alt="International canal workers standing near equipment" data-cap="Workers from across the Caribbean and Latin America.">
+          <figcaption>Workers from across the Caribbean and Latin America.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h2>Power and Sovereignty</h2>
+        <p>U.S. policy supported Panamanian independence and secured building and control rights. Debates over sovereignty in the Canal Zone continued through the 20th century and linked to Progressive Era themes of national administration and reform.</p>
+        <figure class="media">
+          <img src="assets/roosevelt-visit.jpg" alt="Roosevelt viewing canal works with officials" data-cap="Roosevelt’s leadership symbolized national capacity and reform ideals.">
+          <figcaption>Roosevelt’s leadership symbolized national capacity and reform ideals.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="content-wide reveal">
+      <h2>Public Health and Administration</h2>
+      <p>Organized sanitation, hospitals, and housing were hallmarks of Progressive Era administration. These changes supported labor productivity and reshaped everyday life in the Canal Zone.</p>
+      <figure class="media">
+        <img src="assets/gorgas-map.jpg" alt="Mosquito-control map used by public health teams" data-cap="Targeted sanitation mapped risk and response.">
+        <figcaption>Targeted sanitation mapped risk and response.</figcaption>
+      </figure>
+    </section>
+
+    <section class="quote-panel reveal">
+      <blockquote>
+        <p>“[Primary-source excerpt placeholder — edit text].”</p>
+        <cite>— Treaty or government record, 1903–1914 (primary)</cite>
+      </blockquote>
+    </section>
+
+    <div class="page-cta">
+      <a class="btn btn-primary" href="significance.html">Next: Legacy &amp; Significance</a>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>Created by Arav &amp; Deniz</p>
-      <nav class="footer-nav">
-        <a href="timeline.html">Timeline</a>
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-    </div>
+    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close">×</button>
-    <img class="lightbox-img" alt="" />
-    <figcaption class="lightbox-cap"></figcaption>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image"></button>
+    <img class="lightbox-img" alt="">
+    <p class="lightbox-cap"></p>
   </div>
 </body>
 </html>
