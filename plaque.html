@@ -2,59 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Commemorative Plaque | Panama Canal Museum</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Historical Plaque | Panama Canal Museum</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/script.js"></script>
 </head>
-<body data-page="plaque">
-  <a class="skip-link" href="#main">Skip to content</a>
-
+<body>
   <header class="site-header">
-    <div class="wrap">
-      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
-      <nav aria-label="Main">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="historical.html">Historical Background</a></li>
-          <li><a href="construction.html">Construction &amp; Challenges</a></li>
-          <li><a href="impact.html">Social &amp; Political Impact</a></li>
-          <li><a href="significance.html">Legacy &amp; Significance</a></li>
-          <li><a href="timeline.html">Timeline</a></li>
-          <li><a href="plaque.html">Plaque</a></li>
-        </ul>
-      </nav>
-    </div>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction &amp; Challenges</a>
+      <a href="impact.html">Social &amp; Political Impact</a>
+      <a href="significance.html">Legacy &amp; Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html" aria-current="page">Plaque</a>
+    </nav>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-header">
-      <h2>Commemorative Plaque</h2>
-      <p>In honor of those who built the Canal — whose skill, labor, and courage made it possible.</p>
-    </header>
+  <main class="container prose">
+    <h1>Commemorative Plaque</h1>
+    <p class="lead">In honor of the thousands of workers from across the world whose labor, skill, and sacrifice made the Panama Canal possible. May their contributions continue to inspire engineering, cooperation, and courage for generations to come.</p>
 
-    <section class="grid two">
-      <div>
-        <p>
-          This digital plaque honors the thousands of workers from across the world whose labor, expertise, and sacrifice
-          created the Panama Canal. May their contributions continue to inspire engineering, cooperation, and courage for generations.
-        </p>
-      </div>
-
-      <aside class="gallery">
-        <figure>
-          <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque mounted on stone" />
-          <figcaption>Panama Canal dedication plaque — National Archives.</figcaption>
-        </figure>
-      </aside>
-    </section>
+    <figure class="center">
+      <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque" />
+      <figcaption>Panama Canal dedication plaque — National Archives</figcaption>
+    </figure>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
-    </div>
+    <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
