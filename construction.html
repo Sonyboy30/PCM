@@ -1,46 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>Construction & Challenges | Panama Canal Museum</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+<header class="site-header">
+  <div class="brand">
     <h1>Panama Canal Museum</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html" class="active">Construction & Challenges</a>
-      <a href="impact.html">Social & Political Impact</a>
-      <a href="significance.html">Legacy & Significance</a>
-      <a href="plaque.html">Plaque</a>
-    </nav>
-  </header>
+    <p class="tag">Construction &amp; Challenges</p>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="historical.html">Historical Background</a>
+    <a href="construction.html" class="active">Construction &amp; Challenges</a>
+    <a href="impact.html">Social &amp; Political Impact</a>
+    <a href="significance.html">Legacy &amp; Significance</a>
+    <a href="timeline.html">Timeline</a>
+    <a href="plaque.html" class="cta">Plaque</a>
+  </nav>
+</header>
 
-  <main>
-    <section class="slide-up">
-      <h2>Construction & Challenges</h2>
-      <p>
-        The American effort to build the Panama Canal began in 1904, led by Chief Engineers John Stevens and later George Washington Goethals. Unlike the failed French attempt, the Americans adopted a lock-based system to manage elevation and flooding.
-      </p>
-      <p>
-        Tropical diseases like malaria and yellow fever initially devastated the workforce until Dr. William Gorgas implemented sanitation campaigns, eliminating mosquito breeding grounds. Workers endured dangerous conditions, frequent landslides, and grueling heat.
-      </p>
-      <p>
-        By 1913, over 200 million cubic yards of earth had been removed, and the locks and dams stood as marvels of modern engineering.
-      </p>
-    </section>
+<main class="page">
+  <article class="prose">
+    <h2>Engineering a Lock Canal</h2>
+    <p>
+      American engineers abandoned the French sea-level idea and built a lock canal that lifts ships
+      ~85 feet to Gatún Lake. Excavation concentrated on Culebra Cut while massive dams (Gatún, Miraflores)
+      and paired concrete locks enabled gravity-fed lifts and reliable control of the Chagres River.
+    </p>
 
-    <div class="image-grid fade-in">
-      <div class="card"><img src="assets/culebra-cut.jpg"><p>Culebra Cut: the most difficult excavation.</p></div>
-      <div class="card"><img src="assets/gorgas-map.jpg"><p>Dr. William Gorgas’s disease control plan.</p></div>
-      <div class="card"><img src="assets/workers.jpg"><p>Thousands of international workers made it possible.</p></div>
-    </div>
-  </main>
+    <h3>Public Health as Infrastructure</h3>
+    <p>
+      Under Dr. William Gorgas, crews drained standing water, screened buildings, and fumigated to kill
+      mosquitoes. Cases of yellow fever disappeared by late 1905, and malaria dropped dramatically—turning
+      an unworkable site into a manageable one.
+    </p>
 
-  <footer><p>Created by Arav & Deniz — © 2025 Panama Canal Digital Museum</p></footer>
-  <script src="js/animate.js"></script>
+    <h3>By the Numbers</h3>
+    <ul>
+      <li>Hundreds of millions of cubic yards excavated during the U.S. phase.</li>
+      <li>Locks: ~110 ft wide, ~1,000 ft long chambers; electric control systems for gates and culverts.</li>
+      <li>Completion milestone: August 15, 1914 (SS <em>Ancon</em> transit).</li>
+    </ul>
+
+    <aside class="source-note">
+      Based on: History.com; PBS American Experience timeline; U.S. State Dept. milestones.
+    </aside>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
+</footer>
+<script src="script.js" defer></script>
 </body>
 </html>
