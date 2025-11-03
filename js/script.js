@@ -1,57 +1,36 @@
-/* Lightbox for any image inside a figure (uses the figcaption text if present) */
-(function () {
-  const imgs = document.querySelectorAll('figure img, img[data-lightbox]');
+/* Timeline reveal on scroll */
+const onScrollReveal = () => {
+  const items = document.querySelectorAll('.t-item');
+  const vh = window.innerHeight || 800;
+  items.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < vh - 80) el.classList.add('show');
+  });
+};
+document.addEventListener('scroll', onScrollReveal, { passive: true });
+document.addEventListener('DOMContentLoaded', onScrollReveal);
+
+/* Optional lightbox (kept lightweight if you add images later) */
+(() => {
+  const imgs = document.querySelectorAll('figure img, .gallery img');
   if (!imgs.length) return;
 
-  // Create one lightbox for the whole site
-  const lb = document.createElement('div');
-  lb.className = 'lightbox';
-  lb.innerHTML = `
-    <button class="lb-close" aria-label="Close image (Esc)">✕</button>
-    <div class="lb-inner" role="dialog" aria-modal="true">
-      <img alt="">
-      <div class="lb-caption" aria-live="polite"></div>
-    </div>
+  const overlay = document.createElement('div');
+  overlay.style.cssText = `
+    position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;
+    align-items:center;justify-content:center;z-index:9999;padding:20px
   `;
-  document.body.appendChild(lb);
-
-  const lbImg = lb.querySelector('img');
-  const lbCap = lb.querySelector('.lb-caption');
-  const close = () => lb.classList.remove('open');
-
-  lb.addEventListener('click', (e) => {
-    // click backdrop or the close button closes
-    if (e.target === lb || e.target.classList.contains('lb-close')) close();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
-  });
+  const full = document.createElement('img');
+  full.style.cssText = 'max-width:92vw;max-height:88vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)';
+  overlay.appendChild(full);
+  overlay.addEventListener('click', () => overlay.style.display = 'none');
+  document.body.appendChild(overlay);
 
   imgs.forEach(img => {
+    img.style.cursor = 'zoom-in';
     img.addEventListener('click', () => {
-      const cap = img.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || img.alt || '';
-      lbImg.src = img.src;
-      lbImg.alt = img.alt || 'Enlarged image';
-      lbCap.textContent = cap;
-      lb.classList.add('open');
+      full.src = img.src;
+      overlay.style.display = 'flex';
     });
   });
-})();
-
-/* Subtle timeline item reveal when scrolled into view */
-(function () {
-  const items = document.querySelectorAll('.tl-item');
-  if (!items.length) return;
-
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) {
-        e.target.style.opacity = 1;
-        e.target.style.transform = 'translateY(0)';
-        io.unobserve(e.target);
-      }
-    }
-  }, { root: document.querySelector('.timeline-track'), threshold: 0.2 });
-
-  items.forEach(el => io.observe(el));
 })();
