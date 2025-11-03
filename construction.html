@@ -2,58 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Construction & Challenges | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-<header class="site-header"> 
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Construction &amp; Challenges</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html">Historical Background</a>
-    <a href="construction.html" class="active">Construction &amp; Challenges</a>
-    <a href="impact.html">Social &amp; Political Impact</a>
-    <a href="significance.html">Legacy &amp; Significance</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="plaque.html" class="cta">Plaque</a>
-  </nav>
-</header>
+<body data-page="construction">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="prose">
-    <h2>Engineering a Lock Canal</h2>
-    <p>
-      American engineers abandoned the French sea-level idea and built a lock canal that lifts ships
-      ~85 feet to Gatún Lake. Excavation concentrated on Culebra Cut while massive dams (Gatún, Miraflores)
-      and paired concrete locks enabled gravity-fed lifts and reliable control of the Chagres River.
-    </p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h3>Public Health as Infrastructure</h3>
-    <p>
-      Under Dr. William Gorgas, crews drained standing water, screened buildings, and fumigated to kill
-      mosquitoes. Cases of yellow fever disappeared by late 1905, and malaria dropped dramatically—turning
-      an unworkable site into a manageable one.
-    </p>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Construction &amp; Challenges</h2>
+      <p>From redesigning the canal to conquering disease and landslides, the build tested every facet of engineering and public health.</p>
+    </header>
 
-    <h3>By the Numbers</h3>
-    <ul>
-      <li>Hundreds of millions of cubic yards excavated during the U.S. phase.</li>
-      <li>Locks: ~110 ft wide, ~1,000 ft long chambers; electric control systems for gates and culverts.</li>
-      <li>Completion milestone: August 15, 1914 (SS <em>Ancon</em> transit).</li>
-    </ul>
+    <section class="grid two">
+      <div>
+        <h3>Design &amp; Engineering</h3>
+        <p>
+          After the French failure, the U.S. adopted a lock-based system to raise ships to Gatún Lake and down again,
+          overcoming elevation and controlling the Chagres River. Chief Engineers John Stevens and later
+          George Washington Goethals coordinated a vast operation of railroads, dams, and concrete.
+        </p>
 
-    <aside class="source-note">
-      Based on: History.com; PBS American Experience timeline; U.S. State Dept. milestones.
-    </aside>
-  </article>
-</main>
+        <h3>Health &amp; Safety</h3>
+        <p>
+          Malaria and yellow fever initially devastated the workforce. Under Dr. William Gorgas, sanitation campaigns
+          drained standing water, screened buildings, and fumigated — dramatically reducing disease.
+        </p>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script></body>
+        <h3>Earthworks &amp; Risk</h3>
+        <p>
+          The Culebra Cut required relentless excavation and constant rebuilding after landslides. Thousands of workers
+          labored in intense heat around explosives, steam shovels, and trains.
+        </p>
+      </div>
+
+      <aside class="gallery">
+        <figure>
+          <img src="assets/culebra-cut.jpg" alt="Deep excavation through Culebra Cut with work trains" />
+          <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/gorgas-map.jpg" alt="Public health map/diagram used by Dr. Gorgas to target mosquito zones" />
+          <figcaption>Dr. William Gorgas’s disease-control mapping and protocols.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/workers.jpg" alt="Mixed nationalities of Canal workers at a construction yard" />
+          <figcaption>International labor made the project possible.</figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
+</body>
 </html>
