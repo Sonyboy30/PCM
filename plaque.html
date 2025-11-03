@@ -1,53 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Plaque | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="css/style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
   <script defer src="js/script.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="index.html">Panama Canal Museum</a>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="historical.html">Historical Background</a>
-      <a href="construction.html">Construction &amp; Challenges</a>
-      <a href="impact.html">Social &amp; Political Impact</a>
-      <a href="significance.html">Legacy &amp; Significance</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="plaque.html" class="active">Plaque</a>
-      <a href="bibliography.html">Bibliography</a>
-    </nav>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Panama Canal Museum</a>
+      <nav class="main-nav">
+        <a href="historical.html">Historical Background</a>
+        <a href="construction.html">Construction &amp; Challenges</a>
+        <a href="impact.html">Social &amp; Political Impact</a>
+        <a href="significance.html">Legacy &amp; Significance</a>
+        <a href="timeline.html">Timeline</a>
+        <a class="active" href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu"></button>
+    </div>
   </header>
 
-  <main class="wrapper narrow prose">
-    <h1>Commemorative Plaque</h1>
-    <p>
-      In honor of the workers, engineers, and families whose labor, skill, and resolve made the Panama Canal possible.
-    </p>
+  <section class="page-head parallax-soft" data-parallax-speed="0.15">
+    <div class="container">
+      <h1>Commemorative Plaque</h1>
+      <p>In honor of those who built the canal.</p>
+    </div>
+  </section>
 
-    <figure class="frame fade-in">
-      <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque" data-cap="Panama Canal dedication plaque — National Archives" />
-      <figcaption>Panama Canal dedication plaque — National Archives</figcaption>
-    </figure>
+  <main class="container">
+    <section class="content-wide reveal">
+      <p>This plaque honors the thousands of workers whose labor, skill, and sacrifice made the Panama Canal possible. Their work embodies Progressive Era commitments to coordination, public health, and technical innovation.</p>
+      <figure class="media">
+        <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque" data-cap="Panama Canal dedication plaque — National Archives.">
+        <figcaption>Panama Canal dedication plaque — National Archives.</figcaption>
+      </figure>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrapper">
-      <p>Created by Arav &amp; Deniz</p>
-      <nav class="footer-nav">
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-    </div>
+    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close">×</button>
-    <img class="lightbox-img" alt="" />
-    <figcaption class="lightbox-cap"></figcaption>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image"></button>
+    <img class="lightbox-img" alt="">
+    <p class="lightbox-cap"></p>
   </div>
 </body>
 </html>
