@@ -2,53 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Historical Background | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
-<body>
-<header class="site-header">
-  <div class="brand">
-    <h1>Panama Canal Museum</h1>
-    <p class="tag">Historical Background</p>
-  </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="historical.html" class="active">Historical Background</a>
-    <a href="construction.html">Construction &amp; Challenges</a>
-    <a href="impact.html">Social &amp; Political Impact</a>
-    <a href="significance.html">Legacy &amp; Significance</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="plaque.html" class="cta">Plaque</a>
-  </nav>
-</header>
+<body data-page="historical">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<main class="page">
-  <article class="prose">
-    <h2>Why a Canal in Panama?</h2>
-    <p>
-      Since the 1500s, explorers imagined a water passage linking the Atlantic and Pacific. In the late 1800s,
-      France attempted a sea-level cut modeled after Suez but collapsed under landslides, tropical disease,
-      and financial scandal. In 1903, after Panama’s independence from Colombia, the United States secured canal
-      rights and reframed the project around a lock-and-lake design that better fit the terrain.
-    </p>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo"><a href="index.html">Panama Canal Museum</a></h1>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical.html">Historical Background</a></li>
+          <li><a href="construction.html">Construction &amp; Challenges</a></li>
+          <li><a href="impact.html">Social &amp; Political Impact</a></li>
+          <li><a href="significance.html">Legacy &amp; Significance</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="plaque.html">Plaque</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h3>Key Background Points</h3>
-    <ul>
-      <li>French effort (1880s) fails due to yellow fever, malaria, and slides.</li>
-      <li>U.S. involvement (1903–1914) aligns with Progressive Era reforms and state capacity.</li>
-      <li>Lock canal plan reduces excavation and tames the Chagres River via Gatún Lake.</li>
-    </ul>
+  <main id="main" class="wrap">
+    <header class="page-header">
+      <h2>Historical Background</h2>
+      <p>The dream of linking the Atlantic and Pacific through Panama dates to the 1500s,
+         but only the twentieth century marshaled the technology, capital, and political will to finish the job.</p>
+    </header>
 
-    <aside class="source-note">
-      Based on: History.com “Panama Canal” (updated 2025); U.S. State Dept. “Building the Panama Canal, 1903–1914.”
-    </aside>
-  </article>
-</main>
+    <section class="grid two">
+      <div>
+        <p>
+          In the late 19th century, French engineer Ferdinand de Lesseps — builder of the Suez Canal —
+          led the first modern attempt in Panama. Tropical disease, landslides, and financing problems doomed the project.
+        </p>
+        <p>
+          In 1903, the United States under President Theodore Roosevelt took control after supporting Panamanian independence.
+          A lock-based design replaced the French sea-level plan, and by August 1914 the Canal opened to traffic,
+          fundamentally transforming global trade and foreshadowing a new era of American power.
+        </p>
+      </div>
 
-<footer class="site-footer">
-  <p>Created by Arav &amp; Deniz — 2025 Panama Canal Digital Museum</p>
-</footer>
-<script src="js/script.js" defer></script>
+      <aside class="gallery">
+        <figure>
+          <img src="assets/french-failure.jpg" alt="French excavation machinery amid jungle and mud in the 1880s" />
+          <figcaption>French engineers struggle in tropical terrain, 1880s.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/roosevelt-visit.jpg" alt="Theodore Roosevelt inspecting Panama works in 1906" />
+          <figcaption>President Roosevelt’s 1906 visit boosted morale and momentum.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/workers.jpg" alt="Canal workers from the Caribbean and Latin America standing together" />
+          <figcaption>Workers arrived from across the Caribbean and Latin America.</figcaption>
+        </figure>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Created by Arav &amp; Deniz — © 2025 Panama Canal Digital Museum</p>
+    </div>
+  </footer>
 </body>
 </html>
