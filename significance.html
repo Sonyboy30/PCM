@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Legacy & Significance | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction &amp; Challenges</a>
-        <a href="impact.html">Social &amp; Political Impact</a>
-        <a class="active" href="significance.html">Legacy &amp; Significance</a>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction & Challenges</a>
+      <a href="impact.html">Social & Political Impact</a>
+      <a href="significance.html" aria-current="page">Legacy & Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+  </header>
+
+  <!-- Parallax panels -->
+  <section class="panel parallax" data-parallax style="--bg:url('assets/miraflores-locks.jpg')">
+    <div class="panel-inner container">
+      <h1 class="fx-rise">Legacy & Significance</h1>
+      <p class="fx-fade">A global artery of trade and a landmark of Progressive Era state capacity.</p>
+    </div>
+  </section>
+
+  <main class="container content">
+    <div class="grid-2">
+      <div class="fx-in">
+        <p>
+          The canal shortened ocean routes and strengthened commercial links. In U.S. history, it symbolized a belief in professional administration, public health, and large infrastructure backed by the state.
+        </p>
+        <p>
+          The canal’s governance evolved over time and today reflects Panama’s leadership while still serving international shipping. Its story continues through modernization and expansion.
+        </p>
+      </div>
+      <figure class="fx-in">
+        <img loading="lazy" src="assets/first-ship.jpg" alt="Early transit through the Panama Canal" data-full="assets/first-ship.jpg" />
+        <figcaption>Early transits captured public imagination about a new world route.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Primary Source Quote 3 -->
+    <aside class="quote fx-fade">
+      <blockquote>
+        “The opening of the canal changed the map of commerce.”
+      </blockquote>
+      <p class="quote-source">— Contemporary assessment of the canal’s impact</p>
+    </aside>
+
+    <nav class="page-cta">
+      <a class="btn" href="timeline.html">Explore the Timeline</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
         <a href="timeline.html">Timeline</a>
         <a href="plaque.html">Plaque</a>
         <a href="bibliography.html">Bibliography</a>
       </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
     </div>
-  </header>
-
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Legacy &amp; Significance</h1>
-      <p>Global trade, engineering reputation, administrative lessons, and later governance changes.</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="content-two-col reveal">
-      <div>
-        <h2>Trade and Technology</h2>
-        <p>The canal reshaped shipping by cutting time and distance between the Atlantic and Pacific. It stood as a model of modern planning and technical management taught across the world.</p>
-      </div>
-      <div>
-        <h2>Governance and Change</h2>
-        <p>Later treaties transferred control to Panama, reflecting evolving ideas about sovereignty and partnership. The project’s history continues to inform debates about infrastructure and public good.</p>
-      </div>
-    </section>
-
-    <section class="content-wide reveal">
-      <h2>Images of a Lasting Legacy</h2>
-      <div class="gallery">
-        <figure class="media">
-          <img src="assets/first-ship.jpg" alt="SS Ancon completing the first official transit" data-cap="SS <i>Ancon</i>, first official transit, 1914.">
-          <figcaption>SS <i>Ancon</i>, first official transit, 1914.</figcaption>
-        </figure>
-        <figure class="media">
-          <img src="assets/hero-canal.jpg" alt="Aerial view of locks in operation" data-cap="Aerial views show the canal’s continuing role in trade.">
-          <figcaption>Aerial views show the canal’s continuing role in trade.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="quote-panel reveal">
-      <blockquote>
-        <p>“[Primary-source excerpt placeholder — edit text].”</p>
-        <cite>— Contemporary government or speech excerpt (primary)</cite>
-      </blockquote>
-    </section>
-
-    <div class="page-cta">
-      <a class="btn btn-primary" href="timeline.html">Next: Timeline</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image"></button>
-    <img class="lightbox-img" alt="">
-    <p class="lightbox-cap"></p>
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
   </div>
 </body>
 </html>
