@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Construction & Challenges | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a href="historical.html">Historical Background</a>
-        <a class="active" href="construction.html">Construction &amp; Challenges</a>
-        <a href="impact.html">Social &amp; Political Impact</a>
-        <a href="significance.html">Legacy &amp; Significance</a>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html" aria-current="page">Construction & Challenges</a>
+      <a href="impact.html">Social & Political Impact</a>
+      <a href="significance.html">Legacy & Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+  </header>
+
+  <section class="page-hero small" data-parallax style="--bg:url('assets/culebra-cut.jpg')">
+    <div class="page-hero-inner container">
+      <h1 class="fx-rise">Construction & Challenges</h1>
+      <p class="fx-fade">Locks, dams, disease control, landslides, and daily risk in a tropical worksite.</p>
+    </div>
+  </section>
+
+  <main class="container content">
+    <div class="grid-2">
+      <div class="fx-in">
+        <p>
+          American engineers adopted a lock system to raise ships to Gatun Lake and lower them back to sea level. This choice reduced excavation and improved control of the Chagres River. At Culebra Cut, slides were frequent, and work trains hauled spoil day and night.
+        </p>
+        <p>
+          Disease control was central. Guided by public health science, teams drained standing water, screened buildings, fumigated neighborhoods, and provided sanitation services to cut malaria and yellow fever. These efforts mirrored Progressive Era confidence in expertise and public health campaigns.
+        </p>
+      </div>
+      <figure class="fx-in">
+        <img loading="lazy" src="assets/gorgas-map.jpg" alt="Areas sanitized against malaria mosquitoes map" data-full="assets/gorgas-map.jpg" />
+        <figcaption>“Areas Sanitated Against Malaria Mosquitos.” Public health mapping as an engineering tool.</figcaption>
+      </figure>
+    </div>
+
+    <!-- Interactive Gallery -->
+    <section class="gallery grid-3">
+      <figure class="fx-in">
+        <img loading="lazy" src="assets/bucyrus-shovel.jpg" alt="Bucyrus steam shovel at work" data-full="assets/bucyrus-shovel.jpg" />
+        <figcaption>Steam shovels and rebuilt railways drove excavation efficiency.</figcaption>
+      </figure>
+      <figure class="fx-in" style="--d:0.1s">
+        <img loading="lazy" src="assets/gatun-locks.jpg" alt="Gatun Locks under construction" data-full="assets/gatun-locks.jpg" />
+        <figcaption>Lock chambers powered by gravity and an electrical control system.</figcaption>
+      </figure>
+      <figure class="fx-in" style="--d:0.2s">
+        <img loading="lazy" src="assets/culebra-cut.jpg" alt="Culebra Cut work detail" data-full="assets/culebra-cut.jpg" />
+        <figcaption>The nine-mile Culebra Cut was the most dangerous section.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Primary Source Quote 1 -->
+    <aside class="quote fx-fade">
+      <blockquote>
+        “The canal presents a problem not of mere digging, but of organization, health, and discipline.”
+      </blockquote>
+      <p class="quote-source">— Contemporary observation on canal management</p>
+    </aside>
+
+    <nav class="page-cta">
+      <a class="btn" href="impact.html">Next: Social & Political Impact</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
         <a href="timeline.html">Timeline</a>
         <a href="plaque.html">Plaque</a>
         <a href="bibliography.html">Bibliography</a>
       </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
     </div>
-  </header>
-
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Construction &amp; Challenges</h1>
-      <p>From Culebra Cut to the locks and dams, disease control, landslides, and daily risk defined the build.</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="content-two-col reveal">
-      <div>
-        <h2>Culebra Cut</h2>
-        <p>Excavation through the continental divide demanded round-the-clock work and constant responses to landslides.</p>
-        <figure class="media">
-          <img src="assets/culebra-cut.jpg" alt="Culebra Cut excavation with rail lines and shovels" data-cap="Culebra Cut: the most difficult excavation.">
-          <figcaption>Culebra Cut: the most difficult excavation.</figcaption>
-        </figure>
-      </div>
-      <div>
-        <h2>Public Health</h2>
-        <p>Sanitation campaigns targeted mosquito breeding, reducing yellow fever and malaria, and enabling sustained progress.</p>
-        <figure class="media">
-          <img src="assets/gorgas-map.jpg" alt="Public health mosquito map used for sanitation planning" data-cap="Areas targeted in anti-mosquito campaigns.">
-          <figcaption>Areas targeted in anti-mosquito campaigns.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-wide reveal">
-      <h2>Locks and Dams</h2>
-      <p>Engineers built paired locks to raise and lower ships using gravity-fed culverts and gates, an example of Progressive Era faith in expert planning.</p>
-      <div class="gallery">
-        <figure class="media media--sm">
-          <img src="assets/first-ship.jpg" alt="SS Ancon entering the locks in 1914" data-cap="SS <i>Ancon</i>, first official transit, August 15, 1914.">
-          <figcaption>SS <i>Ancon</i>, first official transit, August 15, 1914.</figcaption>
-        </figure>
-        <figure class="media">
-          <img src="assets/workers.jpg" alt="Crew positioning concrete forms for lock chambers" data-cap="Crews poured millions of cubic yards of concrete.">
-          <figcaption>Crews poured millions of cubic yards of concrete.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="quote-panel reveal">
-      <blockquote>
-        <p>“[Primary-source excerpt placeholder — edit text].”</p>
-        <cite>— U.S. Office of the Historian document (primary)</cite>
-      </blockquote>
-    </section>
-
-    <div class="page-cta">
-      <a class="btn btn-primary" href="impact.html">Next: Social &amp; Political Impact</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image"></button>
-    <img class="lightbox-img" alt="">
-    <p class="lightbox-cap"></p>
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
   </div>
 </body>
 </html>
