@@ -1,54 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Plaque | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <title>Commemorative Plaque | Panama Canal Museum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction &amp; Challenges</a>
-        <a href="impact.html">Social &amp; Political Impact</a>
-        <a href="significance.html">Legacy &amp; Significance</a>
-        <a href="timeline.html">Timeline</a>
-        <a class="active" href="plaque.html">Plaque</a>
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
-    </div>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction & Challenges</a>
+      <a href="impact.html">Social & Political Impact</a>
+      <a href="significance.html">Legacy & Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html" aria-current="page">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
   </header>
 
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Commemorative Plaque</h1>
-      <p>In honor of those who built the canal.</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="content-wide reveal">
-      <p>This plaque honors the thousands of workers whose labor, skill, and sacrifice made the Panama Canal possible. Their work embodies Progressive Era commitments to coordination, public health, and technical innovation.</p>
-      <figure class="media">
-        <img src="assets/plaque.jpg" alt="Panama Canal dedication plaque" data-cap="Panama Canal dedication plaque — National Archives.">
-        <figcaption>Panama Canal dedication plaque — National Archives.</figcaption>
-      </figure>
+  <main class="container content narrow">
+    <section class="plaque fx-in">
+      <div class="plaque-metal">
+        <h1>In Honor of Those Who Built the Canal</h1>
+        <p>
+          This plaque honors the thousands of workers from across the world whose labor, skill, and sacrifice made the Panama Canal possible. May their contributions continue to inspire engineering, cooperation, and courage for generations to come.
+        </p>
+        <figure>
+          <img loading="lazy" src="assets/plaque.jpg" alt="Dedication plaque" data-full="assets/plaque.jpg" />
+          <figcaption>Historic dedication plaque. Image courtesy of public archives.</figcaption>
+        </figure>
+      </div>
     </section>
+
+    <nav class="page-cta">
+      <a class="btn" href="bibliography.html">View Bibliography</a>
+    </nav>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image"></button>
-    <img class="lightbox-img" alt="">
-    <p class="lightbox-cap"></p>
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
   </div>
 </body>
 </html>
