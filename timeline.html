@@ -1,90 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Timeline | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction &amp; Challenges</a>
-        <a href="impact.html">Social &amp; Political Impact</a>
-        <a href="significance.html">Legacy &amp; Significance</a>
-        <a class="active" href="timeline.html">Timeline</a>
-        <a href="plaque.html">Plaque</a>
-        <a href="bibliography.html">Bibliography</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
-    </div>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction & Challenges</a>
+      <a href="impact.html">Social & Political Impact</a>
+      <a href="significance.html">Legacy & Significance</a>
+      <a href="timeline.html" aria-current="page">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
   </header>
 
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Timeline</h1>
-      <p>Key moments from early surveys to opening day. Drag, scroll, or use arrow keys.</p>
+  <section class="page-hero small" data-parallax style="--bg:url('assets/timeline-hero.jpg')">
+    <div class="page-hero-inner container">
+      <h1 class="fx-rise">Timeline</h1>
+      <p class="fx-fade">Key moments that frame the canal within the Progressive Era and beyond.</p>
     </div>
   </section>
 
-  <main class="container">
-    <div class="timeline-wrap reveal">
-      <button class="tl-btn prev" aria-label="Previous"></button>
-      <div class="timeline" id="timeline" tabindex="0" aria-label="Panama Canal timeline">
-        <!-- Use PBS-like sequence without quoting text directly -->
-        <article class="tli">
-          <h3>1869</h3>
-          <p>Interest in an inter-ocean route continues as global trade expands.</p>
-        </article>
-        <article class="tli">
-          <h3>1879</h3>
-          <p>French sea-level plan approved; work begins but faces disease and landslides.</p>
-        </article>
-        <article class="tli">
-          <h3>1888–1893</h3>
-          <p>French company collapses; investigations follow in France.</p>
-        </article>
-        <article class="tli">
-          <h3>1903</h3>
-          <p>U.S. backs a canal project after diplomatic changes in Panama.</p>
-        </article>
-        <article class="tli">
-          <h3>1904</h3>
-          <p>American phase begins; sanitation and logistics scale up.</p>
-        </article>
-        <article class="tli">
-          <h3>1905–1907</h3>
-          <p>Public health advances; shift to a lock canal is adopted.</p>
-        </article>
-        <article class="tli">
-          <h3>1909–1911</h3>
-          <p>Lock construction and dam works accelerate.</p>
-        </article>
-        <article class="tli">
-          <h3>1913</h3>
-          <p>Major excavation milestones reached; channels connected.</p>
-        </article>
-        <article class="tli">
-          <h3>1914</h3>
-          <p>Opening to traffic marks completion of the project.</p>
-        </article>
-      </div>
-      <button class="tl-btn next" aria-label="Next"></button>
+  <main class="timeline-wrap">
+    <div class="timeline-toolbar">
+      <button class="tl-btn" data-dir="-1" aria-label="Scroll left">◀</button>
+      <div class="tl-progress"><span></span></div>
+      <button class="tl-btn" data-dir="1" aria-label="Scroll right">▶</button</div>
     </div>
 
-    <!-- Optional quote nodes inside timeline rail -->
-    <div class="timeline-quotes">
-      <blockquote>“Make the dirt fly.” <cite>— Theodore Roosevelt (primary)</cite></blockquote>
-      <blockquote>“[Primary-source excerpt placeholder — edit text].” <cite>— Treaty excerpt (primary)</cite></blockquote>
-    </div>
+    <section class="timeline" data-hscroll>
+      <!-- Each item can include an image and optional quote -->
+      <article class="tl-item snap fx-in">
+        <time>1880s</time>
+        <h3>French Attempt</h3>
+        <p>Sea-level plan faces landslides, disease, and financial collapse.</p>
+        <img loading="lazy" src="assets/french-failure.jpg" alt="French attempt equipment" data-full="assets/french-failure.jpg" />
+      </article>
+
+      <article class="tl-item snap fx-in">
+        <time>1903</time>
+        <h3>Panama’s Independence</h3>
+        <p>New political reality enables U.S. treaty and project control.</p>
+      </article>
+
+      <article class="tl-item snap fx-in">
+        <time>1904</time>
+        <h3>U.S. Begins Work</h3>
+        <p>Lock canal approach and public health campaigns take shape.</p>
+      </article>
+
+      <article class="tl-item snap fx-in">
+        <time>1906</time>
+        <h3>Roosevelt’s Visit</h3>
+        <p>National focus on engineering, health, and administration.</p>
+        <blockquote class="tl-quote">“The work here is of world importance.”</blockquote>
+      </article>
+
+      <article class="tl-item snap fx-in">
+        <time>1909–1913</time>
+        <h3>Locks and Dams</h3>
+        <p>Gatun Dam and lock systems near completion. Culebra Cut finished in 1913.</p>
+        <img loading="lazy" src="assets/gatun-locks.jpg" alt="Gatun locks under construction" data-full="assets/gatun-locks.jpg" />
+      </article>
+
+      <article class="tl-item snap fx-in">
+        <time>Aug 15, 1914</time>
+        <h3>Canal Opens</h3>
+        <p>Early transits change maritime routes.</p>
+        <img loading="lazy" src="assets/first-ship.jpg" alt="Early transit" data-full="assets/first-ship.jpg" />
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
+        <a href="timeline.html">Timeline</a>
+        <a href="plaque.html">Plaque</a>
+        <a href="bibliography.html">Bibliography</a>
+      </nav>
+    </div>
   </footer>
+
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
+  </div>
 </body>
 </html>
