@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Historical Background | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a class="active" href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction &amp; Challenges</a>
-        <a href="impact.html">Social &amp; Political Impact</a>
-        <a href="significance.html">Legacy &amp; Significance</a>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html" aria-current="page">Historical Background</a>
+      <a href="construction.html">Construction & Challenges</a>
+      <a href="impact.html">Social & Political Impact</a>
+      <a href="significance.html">Legacy & Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+  </header>
+
+  <section class="page-hero small" data-parallax style="--bg:url('assets/french-failure.jpg')">
+    <div class="page-hero-inner container">
+      <h1 class="fx-rise">Historical Background</h1>
+      <p class="fx-fade">Early visions, French setbacks, and the American turn in a Progressive Era context.</p>
+    </div>
+  </section>
+
+  <main class="container content">
+    <div class="grid-2">
+      <div class="fx-in">
+        <p>
+          The idea of a water passage across the isthmus of Panama dates to the 16th century. In the late 1800s, France attempted a sea-level canal under Ferdinand de Lesseps but ran into landslides, disease, and financial collapse. By 1903, the United States took over the project and, after supporting Panama’s independence, began construction on a lock canal in 1904.
+        </p>
+        <p>
+          This history unfolded during the Progressive Era, when governments and reformers promoted expertise, public health, and large civic works. The canal became a canvas for those priorities and a test of American power abroad.
+        </p>
+      </div>
+      <figure class="fx-in">
+        <img loading="lazy" src="assets/roosevelt-visit.jpg" alt="Theodore Roosevelt in Panama, 1906" data-full="assets/roosevelt-visit.jpg" />
+        <figcaption>Roosevelt’s 1906 visit signaled political resolve and showcased Progressive Era confidence.</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery">
+      <figure class="fx-in">
+        <img loading="lazy" class="img-small" src="assets/ss-ancon.jpg" alt="SS Ancon in the Canal, 1914" data-full="assets/ss-ancon.jpg" />
+        <figcaption>SS <em>Ancon</em> makes an early transit in 1914.</figcaption>
+      </figure>
+      <figure class="fx-in" style="--d:0.1s">
+        <img loading="lazy" src="assets/workers.jpg" alt="International workforce in Canal Zone" data-full="assets/workers.jpg" />
+        <figcaption>Caribbean and Latin American workers formed the canal’s backbone.</figcaption>
+      </figure>
+      <figure class="fx-in" style="--d:0.2s">
+        <img loading="lazy" src="assets/french-failure.jpg" alt="French-era machinery amidst jungle terrain" data-full="assets/french-failure.jpg" />
+        <figcaption>French equipment struggled with terrain and rain-driven slides.</figcaption>
+      </figure>
+    </div>
+
+    <aside class="quote fx-fade">
+      <blockquote>
+        “We are not building a canal for the present alone. We are building it for the ages.”
+      </blockquote>
+      <p class="quote-source">— attributed to Progressive Era commentary on the Canal</p>
+    </aside>
+
+    <p class="fx-in">
+      The pivot to a lock canal reflected engineering pragmatism. It also aligned with Progressive Era values: centralized administration, expert commissions, and data-driven problem solving.
+    </p>
+
+    <nav class="page-cta">
+      <a class="btn" href="construction.html">Next: Construction & Challenges</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
         <a href="timeline.html">Timeline</a>
         <a href="plaque.html">Plaque</a>
         <a href="bibliography.html">Bibliography</a>
       </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
     </div>
-  </header>
-
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Historical Background</h1>
-      <p>How an old idea became a Progressive Era project: from early visions and French failure to an American lock canal in 1914.</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="content-two-col reveal">
-      <div>
-        <h2>Early Visions and the French Attempt</h2>
-        <p>The idea to link the Atlantic and Pacific by water dates to the 1500s. In the 1880s, Ferdinand de Lesseps attempted a sea-level canal in Panama. Landslides, disease, and funding problems ended the effort.</p>
-        <figure class="media">
-          <img src="assets/french-failure.jpg" alt="French excavation equipment in difficult terrain" data-cap="French engineers struggle in tropical terrain, 1880s.">
-          <figcaption>French engineers struggle in tropical terrain, 1880s.</figcaption>
-        </figure>
-      </div>
-      <div>
-        <h2>Progressive Era Context</h2>
-        <p>As the United States embraced reform and efficiency, leaders backed a canal to speed trade, project influence, and apply modern management and public health methods.</p>
-        <figure class="media">
-          <img src="assets/roosevelt-visit.jpg" alt="President Theodore Roosevelt standing near canal works in 1906" data-cap="Roosevelt’s 1906 visit boosted morale and oversight.">
-          <figcaption>Roosevelt’s 1906 visit boosted morale and oversight.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-wide reveal">
-      <h2>From Plan to Lock Canal</h2>
-      <p>American engineers adopted a lock design to handle the terrain. This choice reflected Progressive Era preferences for technical expertise and pragmatic problem solving.</p>
-      <div class="gallery">
-        <figure class="media">
-          <img src="assets/workers.jpg" alt="Workers from across the Caribbean and Latin America" data-cap="Workers from across the Caribbean and Latin America.">
-          <figcaption>Workers from across the Caribbean and Latin America.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="quote-panel reveal">
-      <blockquote>
-        <p>“Make the dirt fly.”</p>
-        <cite>— Theodore Roosevelt, 1904 message (primary)</cite>
-      </blockquote>
-    </section>
-
-    <div class="page-cta">
-      <a class="btn btn-primary" href="construction.html">Next: Construction &amp; Challenges</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image"></button>
-    <img class="lightbox-img" alt="">
-    <p class="lightbox-cap"></p>
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
   </div>
 </body>
 </html>
