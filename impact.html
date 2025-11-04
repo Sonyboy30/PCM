@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Social & Political Impact | Panama Canal Museum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/script.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="nav-wrap">
-      <a class="brand" href="index.html">Panama Canal Museum</a>
-      <nav class="main-nav">
-        <a href="historical.html">Historical Background</a>
-        <a href="construction.html">Construction &amp; Challenges</a>
-        <a class="active" href="impact.html">Social &amp; Political Impact</a>
-        <a href="significance.html">Legacy &amp; Significance</a>
+<body class="theme">
+  <header class="site-header" data-sticky>
+    <a class="brand" href="index.html">Panama Canal Museum</a>
+    <nav class="site-nav">
+      <a href="historical.html">Historical Background</a>
+      <a href="construction.html">Construction & Challenges</a>
+      <a href="impact.html" aria-current="page">Social & Political Impact</a>
+      <a href="significance.html">Legacy & Significance</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="plaque.html">Plaque</a>
+      <a href="bibliography.html">Bibliography</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+  </header>
+
+  <section class="page-hero small" data-parallax style="--bg:url('assets/workers.jpg')">
+    <div class="page-hero-inner container">
+      <h1 class="fx-rise">Social & Political Impact</h1>
+      <p class="fx-fade">Labor, segregation and pay, sovereignty, and U.S.–Panama relations.</p>
+    </div>
+  </section>
+
+  <main class="container content">
+    <!-- Roosevelt photo added per your ask -->
+    <figure class="fx-in">
+      <img loading="lazy" src="assets/roosevelt-visit.jpg" alt="Theodore Roosevelt with workers in Panama, 1906" data-full="assets/roosevelt-visit.jpg" />
+      <figcaption>Roosevelt’s visit highlighted national attention and political stakes.</figcaption>
+    </figure>
+
+    <div class="grid-2">
+      <div class="fx-in">
+        <p>
+          The Canal Zone operated with a complex labor system that separated workers and wages. Pay scales and housing often reflected nationality and race. At the same time, the project employed tens of thousands and offered new skills and mobility to migrant workers.
+        </p>
+        <p>
+          Politically, the canal reshaped Panama’s sovereignty and U.S. regional influence. Treaties, policing, and administration emphasized security and commerce, which often clashed with local expectations of autonomy.
+        </p>
+      </div>
+      <div class="fx-in">
+        <ul class="artifact-list">
+          <li>
+            <strong>Pay books and scrip</strong>
+            <span>Evidence of tiered wages and controlled economies inside the Zone.</span>
+          </li>
+          <li>
+            <strong>Housing plans</strong>
+            <span>Different accommodations tied to job category and wage scale.</span>
+          </li>
+          <li>
+            <strong>Work rosters</strong>
+            <span>Illustrate how an international workforce sustained the project.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Primary Source Quote 2 -->
+    <aside class="quote fx-fade">
+      <blockquote>
+        “In building the canal we worked not only with machines and concrete, but with peoples and laws.”
+      </blockquote>
+      <p class="quote-source">— Period reflection on administration in the Canal Zone</p>
+    </aside>
+
+    <nav class="page-cta">
+      <a class="btn" href="significance.html">Next: Legacy & Significance</a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Created by Arav & Deniz · © 2025 Panama Canal Digital Museum</p>
+      <nav class="footer-nav">
         <a href="timeline.html">Timeline</a>
         <a href="plaque.html">Plaque</a>
         <a href="bibliography.html">Bibliography</a>
       </nav>
-      <button class="nav-toggle" aria-label="Open menu"></button>
     </div>
-  </header>
-
-  <section class="page-head parallax-soft" data-parallax-speed="0.15">
-    <div class="container">
-      <h1>Social &amp; Political Impact</h1>
-      <p>Labor systems, segregation and pay, sovereignty debates, and Progressive Era state capacity.</p>
-    </div>
-  </section>
-
-  <main class="container">
-    <section class="content-two-col reveal">
-      <div>
-        <h2>Labor and Segregation</h2>
-        <p>The workforce included people from the Caribbean, Latin America, and the United States. Pay grades, housing, and access to services often reflected a segregated system that shaped daily life in the Canal Zone.</p>
-        <figure class="media">
-          <img src="assets/workers.jpg" alt="International canal workers standing near equipment" data-cap="Workers from across the Caribbean and Latin America.">
-          <figcaption>Workers from across the Caribbean and Latin America.</figcaption>
-        </figure>
-      </div>
-      <div>
-        <h2>Power and Sovereignty</h2>
-        <p>U.S. policy supported Panamanian independence and secured building and control rights. Debates over sovereignty in the Canal Zone continued through the 20th century and linked to Progressive Era themes of national administration and reform.</p>
-        <figure class="media">
-          <img src="assets/roosevelt-visit.jpg" alt="Roosevelt viewing canal works with officials" data-cap="Roosevelt’s leadership symbolized national capacity and reform ideals.">
-          <figcaption>Roosevelt’s leadership symbolized national capacity and reform ideals.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="content-wide reveal">
-      <h2>Public Health and Administration</h2>
-      <p>Organized sanitation, hospitals, and housing were hallmarks of Progressive Era administration. These changes supported labor productivity and reshaped everyday life in the Canal Zone.</p>
-      <figure class="media">
-        <img src="assets/gorgas-map.jpg" alt="Mosquito-control map used by public health teams" data-cap="Targeted sanitation mapped risk and response.">
-        <figcaption>Targeted sanitation mapped risk and response.</figcaption>
-      </figure>
-    </section>
-
-    <section class="quote-panel reveal">
-      <blockquote>
-        <p>“[Primary-source excerpt placeholder — edit text].”</p>
-        <cite>— Treaty or government record, 1903–1914 (primary)</cite>
-      </blockquote>
-    </section>
-
-    <div class="page-cta">
-      <a class="btn btn-primary" href="significance.html">Next: Legacy &amp; Significance</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>Created by Arav &amp; Deniz · © 2025 Panama Canal Digital Museum</p>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close image"></button>
-    <img class="lightbox-img" alt="">
-    <p class="lightbox-cap"></p>
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox-close" aria-label="Close">×</button>
+    <img alt="" />
+    <p class="lightbox-caption"></p>
   </div>
 </body>
 </html>
