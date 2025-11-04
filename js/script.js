@@ -1,99 +1,104 @@
-/* ===== PCM — consolidated JS (mobile menu, scroll offset, scrollspy, reveal) ===== */
+// Sticky header appearance
+const header = document.querySelector('[data-sticky]');
+let lastY = 0;
+const onScroll = () => {
+  const y = window.scrollY || document.documentElement.scrollTop;
+  header?.setAttribute('data-scrolled', y > 10 ? 'true' : 'false');
+  lastY = y;
+};
+document.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-(() => {
-  const $ = (sel, root=document) => root.querySelector(sel);
-  const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const siteHeader = document.querySelector('.site-header');
+toggle?.addEventListener('click', () => {
+  const open = siteHeader.getAttribute('data-open') === 'true';
+  siteHeader.setAttribute('data-open', String(!open));
+  toggle.setAttribute('aria-expanded', String(!open));
+});
 
-  // ----- Mobile menu toggle
-  const body = document.body;
-  const toggleBtn = $('.nav-toggle');
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const open = body.classList.toggle('nav-open');
-      toggleBtn.setAttribute('aria-expanded', String(open));
-    });
-
-    // close on ESC or clicking outside
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') body.classList.remove('nav-open');
-    });
-    document.addEventListener('click', (e) => {
-      if (body.classList.contains('nav-open')) {
-        const nav = $('.nav');
-        if (nav && !nav.contains(e.target) && e.target !== toggleBtn) {
-          body.classList.remove('nav-open');
-        }
-      }
-    });
-  }
-
-  // ----- Smooth scroll with sticky header offset (same-page anchors)
-  const header = $('.site-header');
-  const headerH = () => header ? header.getBoundingClientRect().height : 0;
-
-  $$('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href');
-      const target = id && id.length > 1 ? $(id) : null;
-      if (!target) return;
-      e.preventDefault();
-      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerH() - 8);
-      window.scrollTo({ top, behavior: (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth') });
-      history.pushState(null, '', id);
-      body.classList.remove('nav-open');
-    });
-  });
-
-  // Correct initial hash offset on load
-  window.addEventListener('load', () => {
-    if (location.hash && $(location.hash)) {
-      const t = $(location.hash);
-      const top = Math.max(0, t.getBoundingClientRect().top + window.scrollY - headerH() - 8);
-      window.scrollTo(0, top);
+// Scroll reveal
+const inView = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if (e.isIntersecting){
+      e.target.classList.add('is-in');
+      inView.unobserve(e.target);
     }
   });
+},{ rootMargin:'-10% 0px -10% 0px', threshold:0.1 });
+document.querySelectorAll('.fx-in, .fx-fade, .fx-rise, .fx-pop').forEach(el=>inView.observe(el));
 
-  // ----- Scrollspy: highlight current nav link
-  const navLinks = $$('.nav a').filter(a => a.hash);
-  const sections = navLinks
-    .map(a => $(a.hash))
-    .filter(Boolean);
+// Parallax background shim (small effect)
+const parallaxSections = document.querySelectorAll('[data-parallax]');
+const onParallax = () => {
+  const h = window.innerHeight;
+  parallaxSections.forEach(sec=>{
+    const r = sec.getBoundingClientRect();
+    const p = ((r.top + r.height/2) - h/2) / h; // -1..1
+    sec.style.setProperty('--py', String(p.toFixed(4)));
+    sec.style.backgroundPositionY = `${Math.max(-20, Math.min(20, p*20))}px`;
+  });
+};
+document.addEventListener('scroll', onParallax, { passive: true });
+window.addEventListener('resize', onParallax);
+onParallax();
 
-  if (sections.length && 'IntersectionObserver' in window) {
-    const byId = Object.fromEntries(navLinks.map(a => [a.hash, a]));
+// Lightbox for images
+const lightbox = document.querySelector('[data-lightbox]');
+if (lightbox){
+  const lbImg = lightbox.querySelector('img');
+  const lbCap = lightbox.querySelector('.lightbox-caption');
+  const close = lightbox.querySelector('.lightbox-close');
+  const openLB = (src, cap) => {
+    lbImg.src = src;
+    lbCap.textContent = cap || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+  const closeLB = () => {
+    lightbox.hidden = true;
+    lbImg.src = '';
+    lbCap.textContent = '';
+    document.body.style.overflow = '';
+  };
+  close.addEventListener('click', closeLB);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) closeLB(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && !lightbox.hidden) closeLB(); });
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const id = '#' + entry.target.id;
-        navLinks.forEach(a => a.classList.toggle('is-active', a.hash === id));
-      });
-    }, {
-      rootMargin: `-${headerH() + 24}px 0px -60% 0px`,
-      threshold: 0.1
+  document.querySelectorAll('img[data-full]').forEach(img=>{
+    img.addEventListener('click', ()=>{
+      openLB(img.getAttribute('data-full') || img.src, img.closest('figure')?.querySelector('figcaption')?.textContent?.trim());
     });
+  });
+}
 
-    sections.forEach(sec => io.observe(sec));
-  }
+// Horizontal timeline controls
+const tl = document.querySelector('[data-hscroll]');
+if (tl){
+  const progress = document.querySelector('.tl-progress span');
+  const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+  const setProgress = () => {
+    const max = tl.scrollWidth - tl.clientWidth;
+    const v = max > 0 ? tl.scrollLeft / max : 0;
+    progress.style.width = `${clamp(v*100,0,100)}%`;
+  };
+  tl.addEventListener('scroll', setProgress, { passive: true });
+  setProgress();
 
-  // ----- Reveal on scroll (nice but respects reduced motion)
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-    const revealTargets = $$('[data-reveal]');
-    const revealer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.transition = 'transform .5s ease, opacity .5s ease';
-          e.target.style.transform = 'none';
-          e.target.style.opacity = '1';
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    revealTargets.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(12px)';
-      revealer.observe(el);
+  document.querySelectorAll('.tl-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const dir = Number(btn.getAttribute('data-dir')) || 1;
+      const delta = Math.round(tl.clientWidth * 0.8) * dir;
+      tl.scrollBy({ left: delta, behavior:'smooth' });
     });
-  }
-})();
+  });
+}
+
+// Ensure hero text appears after load
+window.addEventListener('load', ()=>{
+  document.querySelectorAll('.fx-pop, .fx-rise, .fx-fade, .fx-in').forEach(el=>{
+    // In case IntersectionObserver missed initial hero
+    if (el.closest('.hero') || el.closest('.page-hero')) el.classList.add('is-in');
+  });
+});
